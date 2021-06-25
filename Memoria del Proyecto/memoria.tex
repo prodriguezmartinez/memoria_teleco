@@ -31,9 +31,11 @@
 \usepackage[nottoc, notlot, notlof, notindex]{tocbibind} %% Opciones de índice
 \usepackage{latexsym}  %% Logo LaTeX
 \usepackage[shortlabels]{enumitem}
+\usepackage{xcolor}
+
 
 \title{Memoria del Proyecto}
-\author{Nombre del autor}
+\author{Paula Rodrı́guez Martı́nez}
 
 \renewcommand{\baselinestretch}{1.5}  %% Interlineado
 
@@ -52,7 +54,7 @@
 \vspace{1.75cm}
 
 \Large
-TITULACIÓN EN MAYÚSCULAS
+GRADO EN INGENIERÍA EN TECNOLOGÍAS DE TELECOMUNICACIÓN
 
 \vspace{0.4cm}
 
@@ -61,7 +63,7 @@ Curso Académico 2020/2021
 
 \vspace{0.8cm}
 
-Trabajo Fin de Grado/Máster
+Trabajo Fin de Grado
 
 \vspace{2.5cm}
 
@@ -90,11 +92,11 @@ Tutor : Dr. Gregorio Robles
 \vspace{-4cm}
 \begin{center}
 \LARGE
-\textbf{Trabajo Fin de Grado/Máster}
+\textbf{Trabajo Fin de Grado}
 
 \vspace{1cm}
 \large
-Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
+Dr. Snap!
 
 \vspace{1cm}
 \large
@@ -104,7 +106,7 @@ Título del Trabajo con Letras Capitales para Sustantivos y Adjetivos
 \end{center}
 
 \vspace{1cm}
-La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 202X, siendo calificada por el siguiente tribunal:
+La defensa del presente Proyecto Fin de Carrera se realizó el día \qquad$\;\,$ de \qquad\qquad\qquad\qquad \newline de 2021, siendo calificada por el siguiente tribunal:
 
 
 \vspace{0.5cm}
@@ -126,7 +128,7 @@ y habiendo obtenido la siguiente calificación:
 
 \vspace{1cm}
 \begin{flushright}
-Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 202X
+Fuenlabrada, a \qquad$\;\,$ de \qquad\qquad\qquad\qquad de 2021
 \end{flushright}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -208,16 +210,18 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 
 \cleardoublepage
 \chapter{Introducción}
-\label{sec:intro} % etiqueta para poder referenciar luego en el texto con ~\ref{sec:intro}
+\label{sec:intro} % etiqueta para poder referenciar luego en el texto con~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
 Con el avance de las tecnologías, la programación y el pensamiento computacional se han extendido de tal forma que ya se incluyen en el temario de educación secundaria obligatoria. Un programa no es más que un conjunto de sentencias que dan instrucciones a un ordenador y es necesario aprender un lenguaje de programación con el que escribirlas.
+
+{\color{red} Aquí deberías hablar un poco de qué va tu TFG. Al menos un par de párrafos}
 
 \section{Conceptos básicos de programación}
 \label{sec:conceptos basicos}
 
 \subsection{Lenguajes de programación}
 \label{subsec:estilo}
-Tenemos 3 tipos de lenguaje ~\cite{aguilar1988fundamentos}:
+Tenemos tres tipos de lenguaje~\cite{aguilar1988fundamentos}:
 \begin{itemize}
     \item Lenguaje máquina: instrucciones que la máquina entiende directamente.
     \item Lenguaje de bajo nivel: instrucciones más sencillas pero que necesitan ser traducidas a lenguaje máquina. Dependen del tipo de computadora.
@@ -233,9 +237,9 @@ Tenemos 3 tipos de lenguaje ~\cite{aguilar1988fundamentos}:
     \end{figure}
 
 
-Para programar, antes de escribir las sentencias en un lenguaje de programación como Python o Java, se recomienda escribirlo en pseudocógido. En la figura ~\ref{figura:lenguaje programación} se observa las formas de conseguir el código máquina del ordenador.
+Para programar, antes de escribir las sentencias en un lenguaje de programación como Python o Java, se recomienda escribirlo en pseudocógido. En la figura~\ref{figura:lenguaje programación} se observa las formas de conseguir el código máquina del ordenador.
 \subsection{Pseudocódigo y diagrama de control}
-EL pseudocódigo es un paso intermedio entre el lenguaje humano y el lenguaje máquina.  Define la lógica y las estructuras de control sin seguir ningún lenguaje de programación y, sirve para pensar cómo abordar un problema de programación desarrollando un algoritmo. Los pasos principales de un algoritmo son  ~\cite{duque2017algoritmos}:
+EL pseudocódigo es un paso intermedio entre el lenguaje humano y el lenguaje máquina.  Define la lógica y las estructuras de control sin seguir ningún lenguaje de programación y, sirve para pensar cómo abordar un problema de programación desarrollando un algoritmo. Los pasos principales de un algoritmo son~\cite{duque2017algoritmos}:
 \begin{itemize}
     \item Inicio
     \item Ingresar/obtener los datos necesarios
@@ -244,7 +248,7 @@ EL pseudocódigo es un paso intermedio entre el lenguaje humano y el lenguaje m�
     \item Fin
 \end{itemize}
 
-Otra forma de abordar el problema es con un diagrama de flujo o control. En él se definen los pasos del algoritmo escritos en unas cajas unidas por flechas, denominadas líneas de flujo, que indican la secuencia en que se debe ejecutar ~\cite{albertodiapositivas}. 
+Otra forma de abordar el problema es con un diagrama de flujo o control. En él se definen los pasos del algoritmo escritos en unas cajas unidas por flechas, denominadas líneas de flujo, que indican la secuencia en que se debe ejecutar~\cite{albertodiapositivas}. 
 
 Es conveniente usar ambos a la vez como herramientas de ayuda. Un ejemplo de pseudocódigo y de diagrama de flujo sería el que viene en la figura \ref{figura:pseudocodigo}. En él se puede comprobar como son complementarios y de gran ayuda para poder definir los algoritmos de los programas.
 \begin{figure}[h]
@@ -254,17 +258,21 @@ Es conveniente usar ambos a la vez como herramientas de ayuda. Un ejemplo de pse
         \caption{Ejemplo de pseudocódigo y diagrama de control}
         \label{figura:pseudocodigo}
     \end{figure}
+
+{\color{red} Yo estas partes de los lenguajes de programación y el pseudocódigo no las veo, y menos en la intro}
+
 \subsection{Programación en bloques}
-A raíz del desarrollo que se ha producido en la docencia de los fundamentos de programación y en las TIC, surge el concepto de ludificación. \"\ Esta es un método con la finalidad de crear una experiencia  significativa y motivadora a través de la integración de mecánicas de juego en entornos y aplicaciones no lúdicas\" ~\cite{lopez2017pensamiento}. La programación en bloques consiste en crear programas encajando unas piezas  predefinidas que permiten hacer funciones o procedimientos sin necesidad de un lenguaje de programación. Tiene similitudes al pseudocódigo y al diagrama de control. Es un tipo de enseñanza activa que promueve el pensamiento computacional, las diferentes formas de analizar y abordar los problemas y el diseño constructivo visual.
-En este ámbito, Scracth es una de las plataformas virtuales más conocidas. En ella se pueden crear programas como se indica en la figura ~\ref{figura:scratch} donde se observan diferentes bloques con funciones distintas.
+A raíz del desarrollo que se ha producido en la docencia de los fundamentos de programación y en las TIC, surge el concepto de ludificación. ``Esta {\color{red} ¿Esta?} es un método con la finalidad de crear una experiencia  significativa y motivadora a través de la integración de mecánicas de juego en entornos y aplicaciones no lúdicas''~\cite{lopez2017pensamiento}. La programación en bloques consiste en crear programas encajando unas piezas  predefinidas que permiten hacer funciones o procedimientos sin necesidad de un lenguaje de programación. Tiene similitudes al pseudocódigo y al diagrama de control. Es un tipo de enseñanza activa que promueve el pensamiento computacional, las diferentes formas de analizar y abordar los problemas y el diseño constructivo visual.
+En este ámbito, Scracth es una de las plataformas virtuales más conocidas. En ella se pueden crear programas como se indica en la figura~\ref{figura:scratch} donde se observan diferentes bloques con funciones distintas.
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.55]{img/scratch.png}
         \caption{Programa en Scratch}
         \label{figura:scratch}
 \end{figure}
+
 \subsection{Pensamiento computacional}
-El pensamiento computacional es “el proceso de pensamiento que interviene en la formulación de los problemas y sus soluciones, de manera que las soluciones se representen de forma que pueda ser realizada por un procesador de información” ~\cite{wing2011research}. Para poder evaluar sus competencias se han definido los siguientes puntos basados en la herramienta Dr. Scratch:
+El pensamiento computacional es ``el proceso de pensamiento que interviene en la formulación de los problemas y sus soluciones, de manera que las soluciones se representen de forma que pueda ser realizada por un procesador de información''~\cite{wing2011research}. Para poder evaluar sus competencias se han definido los siguientes puntos basados en la herramienta Dr. Scratch:
 \begin{enumerate}[1)]
     \item Paralelismo: sucesión simultánea de varias instrucciones o acciones. Por ejemplo, se necesitaría paralelismo si quisiésemos que dos personajes giren 15º a la vez.
     \item Condicionales: cuando las instrucciones se pueden ejecutar o no en función del resultado de una condición. Los condicionales más típicos, entre ellos, se incluyen los operadores lógicos (and, or, not).
@@ -275,7 +283,11 @@ El pensamiento computacional es “el proceso de pensamiento que interviene en l
     \item Datos: esto incluye las operaciones con las variables, listas y atributos.
     \item Diversidad: supone el uso de distintos tipos de bloques como de movimiento y de evento.
 \end{enumerate}
+
 \section{Snap! Berkeley}
+
+{\color{red} Algo de Snap! puedes hablar en la intro. Pero no tan extenso. El detalle debería ir en el capítulo de estado del arte.}
+
 Es una plataforma virtual que se programó en JavaScript como extensión de la ya mencionada plataforma Scratch. ~Snap! define un lenguaje de programación visual que permite programar por bloques. Como novedades implementa listas avanzadas y permite crear bloques definidos  más potentes. Para entender el funcionamiento de Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
 \begin{itemize}
     
@@ -302,14 +314,14 @@ Es una plataforma virtual que se programó en JavaScript como extensión de la y
                         \centering
                         \includegraphics[scale=0.5]{img/blo4-2.png}
                         \caption{Bloques de tipo motion, lookm sound y pen respectivamente.}
-                        \label{figura:bloque1}
+                        \label{figura:bloque2}
                 \end{figure}
                  \end{enumerate}
         \item Según su funcionalidad:
             \begin{enumerate}[a)]
              \item Command block: se corresponden con bloques que tienen acciones ya definidas.
              \item Reporter block: proporciona un valor de entrada que será usada en una acción.
-             \item Predicate: es otro tipo de `` reporter block"\ ya que devuelve una entrada de tipo True o False. Tiene sentido usarlos en bucles o condicionales.
+             \item Predicate: es otro tipo de ``reporter block'' ya que devuelve una entrada de tipo True o False. Tiene sentido usarlos en bucles o condicionales.
             \end{enumerate}
         \item Según su forma:
              \begin{enumerate}[a)]
@@ -318,26 +330,29 @@ Es una plataforma virtual que se programó en JavaScript como extensión de la y
              \item C shape: es de tipo command pero admite dentro de él otro script o un único brick shape. Se corresponde con los bucles y los condicionales.
              \item E shape: compuesto con dos bloques C shape.
              \item Oval shape: se corresponde con los reporter block. Por ejemplos, las variables son óvalos de color naranja.
-             \item Hex shape:  se corresponde con los predicate block.
+             \item Hex shape: se corresponde con los predicate block.
              \end{enumerate}
-        En la figura ~\ref{figura:shape} tenemos varios ejemplos.
+        En la figura~\ref{figura:shape} tenemos varios ejemplos.
         
         \begin{figure}[h]
                         \centering
                         \includegraphics[scale=0.55]{img/shapes.PNG}
                         \caption{Bloques según la forma en Snap!}
                         \label{figura:shape}
-                \end{figure}
+        \end{figure}
     \end{enumerate}
-    \item Script: es una pila o agrupación de bloques que se inicializan con los hat blocks y realizan un conjunto de acciones como en la figura \ref{figura:script}. \\
-    
+
+
+    \item Script: es una pila o agrupación de bloques que se inicializan con los hat blocks y realizan un conjunto de acciones como en la figura~\ref{figura:script}.
+
      \begin{figure}[h]
         \centering
         \includegraphics[scale=1]{img/script.PNG}
         \caption{Script en Snap!}
         \label{figura:script}
     \end{figure}
-    \item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro programa. Por ejemplo, en la figura ~\ref{figura:sprites} se puede observar que tenemos dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. 
+    
+    \item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. 
     \begin{figure}[h]
         \centering
         \includegraphics[scale=0.2]{img/sprite.png}
@@ -397,7 +412,7 @@ El nivel final, que es el que da la calificación total del proyecto obtenida a 
           Avanzado $\rightarrow $ [2.5, 3]
      \end{itemize}
 \item
-El modo profesor amplía el modo estudiante con la posibilidad de analizar un archivo ZIP en el que se encuentran los xml de los proyectos de sus alumnos. Una vez analizado todos los archivos xml, se da la opción de descargar las puntuaciones  de las 8 secciones y el nivel final en formato csv.
+El modo profesor amplía el modo estudiante con la posibilidad de analizar un archivo ZIP en el que se encuentran los xml de los proyectos de sus alumnos. Una vez analizado todos los archivos XML, se da la opción de descargar las puntuaciones  de las 8 secciones y el nivel final en formato CSV.
 
 \end{itemize}
 Por último, para ambos modos se han definido varios dashboards en el que se muestran gráficos de los datos de los proyectos analizados.
@@ -424,7 +439,7 @@ En este apartado se explicará de forma breve y concisa los lenguajes de program
 
 \section{Modelo cliente-servidor} 
 \label{sec:seccion1}
-A día de hoy, la mayoría de las aplicaciones utilizan un esquema basado en el llamado modelo cliente-servidor. Es una arquitectura orientada a servicios donde los clientes son los usuarios de los servicios y de sus servidores asociados .~\cite{castro2015arquitectura} 
+A día de hoy, la mayoría de las aplicaciones utilizan un esquema basado en el llamado modelo cliente-servidor. Es una arquitectura orientada a servicios donde los clientes son los usuarios de los servicios y de sus servidores asociados~\cite{castro2015arquitectura}.
  \begin{itemize}
           \item
          Cliente: es la parte encargada de mandar peticiones al servidor y recibir las respuestas de este. Los usuarios interaccionan con la parte del cliente.
@@ -444,7 +459,7 @@ Las desventajas de este modelo:
 \begin{itemize}
     \item Problemas de congestión directamente proporcional al número de clientes
     \item Mantenimiento simple
-    \item Escalable ~\cite{lizama2016redes} 
+    \item Escalable~\cite{lizama2016redes} 
 \end{itemize}
 
 \begin{figure}[h]
@@ -454,10 +469,10 @@ Las desventajas de este modelo:
         \label{figura:cliente-servidor}
     \end{figure}
 
-Cabe mencionar que es un modelo de aplicación distribuida ya que las tareas que se realizan (solicitar recursos o enviarlos) se reparten entre cliente y servidor.  Por tanto, distinguimos 3 partes fundamentales de una aplicación distribuida:
+Cabe mencionar que es un modelo de aplicación distribuida ya que las tareas que se realizan (solicitar recursos o enviarlos) se reparten entre cliente y servidor. Por tanto, distinguimos 3 partes fundamentales de una aplicación distribuida:
 \begin{itemize}
     \item Capa de presentación: también llamada interfaz de usuario, es responsable del control de la interacción entre el usuario y la aplicación. Se engloban todas las tareas que deben ser realizadas por la parte cliente del modelo general~\cite{marini2012modelo}. Por ejemplo, para el aspecto de la aplicación web se puede usar CSS, un lenguaje de estilos. Además,esta capa se corresponde en la actualidad con el concepto de \textit{frontend} de una aplicación web.
-    \item Capa de negocio: es la capa intermedia ya que se comunica con la capa de presentación y con la capa de datos. ~\cite{bazurto2018arquitectura} Asegura las directrices o reglas del negocio, controla las secuencias de acciones y aísla los cambios de las interfaces de los usuarios y de los datos.~\cite{marini2012modelo} 
+    \item Capa de negocio: es la capa intermedia ya que se comunica con la capa de presentación y con la capa de datos.~\cite{bazurto2018arquitectura} Asegura las directrices o reglas del negocio, controla las secuencias de acciones y aísla los cambios de las interfaces de los usuarios y de los datos.~\cite{marini2012modelo} 
     \item Capa de datos: es la que tiene los datos y la que se encarga de acceder a ellos y operar con ellos. Esta capa se corresponde con el concepto de \textit{backend}. Las tecnologías que se incluyen en esta capa son tales como los gestores de bases de datos o los frameworks.
 \end{itemize}
 \begin{figure}[h]
@@ -471,7 +486,7 @@ La arquitectura MVC divide las partes de una aplicación en modelo, vista y cont
 
 \begin{itemize}
     \item Modelo: se encarga de la representación de los datos. En Django se corresponde con el módulo models.py.
-    \item Vista: se corresponde a la lógica de aplicación y se encarga de la presentación al usuario de los datos del modelo. En Django, las vistas se corresponden al módulo views.py y delegan la presentación de información en las plantillas o templates. Por eso, se puede decir que su arquitectura es MTV (modelo-template-vista) en vez de MVC como podemos observar en la figura ~\ref{figura:MVC}.
+    \item Vista: se corresponde a la lógica de aplicación y se encarga de la presentación al usuario de los datos del modelo. En Django, las vistas se corresponden al módulo views.py y delegan la presentación de información en las plantillas o templates. Por eso, se puede decir que su arquitectura es MTV (modelo-template-vista) en vez de MVC como podemos observar en la figura~\ref{figura:MVC}.
     \item Controlador: recibe los eventos de entrada y contiene reglas de gestión de eventos como indicar cambios al modelo o elegir la vista adecuada para mostrar resultados. 
 \end{itemize}
 
@@ -492,7 +507,7 @@ REST es un modelo de diseño de servicio web que define un conjunto de principio
     \item GET: petición para obtener un recurso.
     \item POST: petición para crear un recurso en el servidor.
     \item PUT: petición para actualizar un recurso en el servidor.
-    \item DELETE: petición para eliminar un recurso. ~\cite{rodriguez2008restful}
+    \item DELETE: petición para eliminar un recurso.~\cite{rodriguez2008restful}
 \end{itemize}
 \end{enumerate}
 \section{FRONTEND}
@@ -513,7 +528,7 @@ HyperText Markup Language, en español lenguaje marcado de hipervínculos, es el
         \label{figura:tags}
 \end{figure}
 \subsection{CSS}
-Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje de estilos que permite modificar la apariencia de páginas webs construidas en HTML . La sintaxis de una instrucción CSS es una declaración que tiene una propiedad y un valor ~\cite{mdn}. La propiedad es la característica de estilo que se quiere cambiar, por ejemplo si queremos cambiar el fondo la propiedad sería ´´background"\, y el valor sería el color o imagen del fondo que se querría cambiar. Se agrupan las declaraciones referidas a un elemento concreto de HTML, denominado selector, en un bloque. En la figura  ~\ref{figura:css} se muestra un ejemplo de CSS dando estilo a un código HTML.
+Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje de estilos que permite modificar la apariencia de páginas webs construidas en HTML. La sintaxis de una instrucción CSS es una declaración que tiene una propiedad y un valor~\cite{mdn}. La propiedad es la característica de estilo que se quiere cambiar, por ejemplo si queremos cambiar el fondo la propiedad sería ``background'', y el valor sería el color o imagen del fondo que se querría cambiar. Se agrupan las declaraciones referidas a un elemento concreto de HTML, denominado selector, en un bloque. En la figura~\ref{figura:css} se muestra un ejemplo de CSS dando estilo a un código HTML.
 
 \begin{figure}[h]
         \centering
@@ -522,10 +537,10 @@ Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje d
         \label{figura:css}
 \end{figure}
 \subsection{JavaScript}
-Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JS en HTML se debe indicar con la etiqueta script.  Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones ~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ´´event handler\" ~\cite{perez2019introduccion}.
+Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JS en HTML se debe indicar con la etiqueta script.  Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ´´event handler''~\cite{perez2019introduccion}.
 
 \section{BACKEND}
-Se corresponde con la parte del servidor, la base de datos y la aplicación. Para ello utilizamos un lenguaje de programación (en nuestro caso Python), un framework para desarrollar el sitio web (Django), una base de datos (sqlite3) y un proveedor de  servidor  online donde lanzar la aplicación (pythonanywhere). En la figura ~\ref{figura:backend} vemos distintas tecnologías que forman parte del \textit{backend}.
+Se corresponde con la parte del servidor, la base de datos y la aplicación. Para ello utilizamos un lenguaje de programación (en nuestro caso Python), un framework para desarrollar el sitio web (Django), una base de datos (sqlite3) y un proveedor de  servidor  online donde lanzar la aplicación (pythonanywhere). En la figura~\ref{figura:backend} vemos distintas tecnologías que forman parte del \textit{backend}.
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.6]{img/backend.png}
@@ -533,7 +548,7 @@ Se corresponde con la parte del servidor, la base de datos y la aplicación. Par
         \label{figura:backend}
 \end{figure}
 \subsection{Pyhton}
-Lenguaje de programación creado por Guido van Rossum en los 90', administrado por Python Software Foundation y con licencia de código abierto. En nuestra aplicación web usaremos la versión 3.8.5. Las caracterísicas principales de este lenguaje son las siguientes ~\cite{gonzalez2014python}:
+Lenguaje de programación creado por Guido van Rossum en los 90, administrado por Python Software Foundation y con licencia de código abierto. En nuestra aplicación web usaremos la versión 3.8.5. Las caracterísicas principales de este lenguaje son las siguientes~\cite{gonzalez2014python}:
 \begin{itemize}
     \item Lenguaje de alto nivel e interpretado
     \item Tipado dinámico 
@@ -542,7 +557,7 @@ Lenguaje de programación creado por Guido van Rossum en los 90', administrado p
     \item Programación orientada a objetos aunque permite también la programación imperativa, funcional y programación orientada a aspectos.
 \end{itemize}
 \subsection{Django}
-Es un framework de alto nivel que permite crear una aplicación web usando python de forma sencilla cuyas características más destacadas son ~\cite{bennett2009practical}:
+Es un framework de alto nivel que permite crear una aplicación web usando python de forma sencilla cuyas características más destacadas son~\cite{bennett2009practical}:
 \begin{itemize}
     \item Tiene un mapeador objeto relacional (ORM) que es una librería que reconoce y relaciona cómo es la base de datos o el código que tú escribas.
     \item Conjunto de librerías HTTP que gestionan las peticiones y respuestas.
@@ -560,7 +575,7 @@ Es un framework de alto nivel que permite crear una aplicación web usando pytho
         \label{figura:appDjango}
 \end{figure}
 \subsection{SQLite3}
-SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarrollado en una biblioteca programada en C la cual tiene compatibilidad con la mayoría de lenguajes de programación utilizados a día de hoy, SQLite es un motor SQL confiable dado que la mayoría del código fuente presente en su biblioteca está destinado a la realización de test unitarios y procesos de validación, cabe destacar en SQLite las siguientes características ~\cite{sqlite}: 
+SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarrollado en una biblioteca programada en C la cual tiene compatibilidad con la mayoría de lenguajes de programación utilizados a día de hoy, SQLite es un motor SQL confiable dado que la mayoría del código fuente presente en su biblioteca está destinado a la realización de test unitarios y procesos de validación, cabe destacar en SQLite las siguientes características~\cite{sqlite}: 
 \begin{itemize}
     \item Autónomo y cuasi independiente: En el proceso de ejecución no existe un uso de más recursos que los proporcionados en el código fuente de SQLite, no realizando así un uso de bibliotecas u programas externos del sistema.
 \item Carencia de servidor: Para este motor el sistema cliente-servidor clásico es cosa del pasado, pudiendo permitir que el proceso que requiera de SQLite lea y escriba directamente desde los archivos de la base de datos en disco. 
@@ -569,7 +584,7 @@ SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarro
 
 \end{itemize}
 \subsection{PythonAnywhere}
-Proporciona un servidor  para poder subir tu aplicación web a la nube. Es compatible con proyectos de Django y existen dos modalidades: de pago y gratuita. La de pago tiene más ventajas y opciones como es la posibilidad de elegir el dominio, al contrario que, la versión gratuita que te impone el dominio "http://yourusername.pythonanywhere.com/". En nuestro caso, la aplicación estará alojada en http://prodriguezmartinez.pythonanywhere.com/.
+Proporciona un servidor  para poder subir tu aplicación web a la nube. Es compatible con proyectos de Django y existen dos modalidades: de pago y gratuita. La de pago tiene más ventajas y opciones como es la posibilidad de elegir el dominio, al contrario que, la versión gratuita que te impone el dominio \url{http://yourusername.pythonanywhere.com/}. En nuestro caso, la aplicación estará alojada en \url{http://prodriguezmartinez.pythonanywhere.com/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -581,7 +596,7 @@ Proporciona un servidor  para poder subir tu aplicación web a la nube. Es compa
 \chapter{Diseño e implementación}
 En este capítulo detallaremos cómo hemos trabajado con las tecnologías explicadas en el capítulo 3 para poder crear la aplicación Dr. Snap!
 \section{Arquitectura general} 
-La arquitectura de la aplicación creada la podemos dividir como se muestra en la figura ~\ref{figura:esquema}.
+La arquitectura de la aplicación creada la podemos dividir como se muestra en la figura~\ref{figura:esquema}.
 \begin{figure}[h]
             \centering
             \includegraphics[scale=0.5]{img/arquitectura.PNG}
@@ -591,11 +606,11 @@ La arquitectura de la aplicación creada la podemos dividir como se muestra en l
 
 \label{sec:arquitectura}
 \subsection{FRONTEND}
-En este apartado se desarrolla la capa de presentación o interfaz del usuario. Para el aspecto de la aplicaciń web hemos añadido un estilo CSS asociado a unas plantillas HTML (templates) y hemos diseñado un logo con el programa Clip Studio Paint .
+En este apartado se desarrolla la capa de presentación o interfaz del usuario. Para el aspecto de la aplicaciń web hemos añadido un estilo CSS asociado a unas plantillas HTML (templates) y hemos diseñado un logo con el programa Clip Studio Paint.
 \begin{enumerate}[a)]
     \item \textbf{HTML Y TEMPLATES}:
     
-    Las plantillas definen los elementos HTML de la página web en conjunto con el CSS que se encarga de dar el estilo y apariencia de los elementos de las plantillas. En este proyecto se ha usado una plantilla de referencia gratuita que se puede encontrar en el enlace siguiente. Se han hecho los cambios pertinentes para quedar de la forma que aparece en la figura ~\ref{figura:index} donde se define la cabecera, el menú horizontal, el logo y el pie de página.\\
+    Las plantillas definen los elementos HTML de la página web en conjunto con el CSS que se encarga de dar el estilo y apariencia de los elementos de las plantillas. En este proyecto se ha usado una plantilla de referencia gratuita que se puede encontrar en el enlace siguiente. Se han hecho los cambios pertinentes para quedar de la forma que aparece en la figura~\ref{figura:index} donde se define la cabecera, el menú horizontal, el logo y el pie de página.\\
     
      \begin{figure}[h]
             \centering
@@ -604,7 +619,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
             \label{figura:index}
         \end{figure}
     
-    A raíz de esta template ``índice" se han extendido las demás gracias a las funcionalidades de Django``built-in template"\ y ``template inheritance" que permiten dejar bloques sin definir los cuales las plantillas ``hijo"  que se creen serán las encargadas de rellenarlos. Estas heredan los elementos de la de referencia como es la cabecera o el menú principal. De esta forma, se evita repetir código. En la figura ~\ref{figura:herencia} se muestra el funcionamiento de la herencia de plantillas de Django en Dr. Snap! donde index.html es la plantilla de referencia y *.html, las plantillas hijo que dan contenido al bloque cuerpo heredando todos los demás elementos de index.html.
+    A raíz de esta template ``índice'' se han extendido las demás gracias a las funcionalidades de Django``built-in template'' y ``template inheritance'' que permiten dejar bloques sin definir los cuales las plantillas ``hijo''  que se creen serán las encargadas de rellenarlos. Estas heredan los elementos de la de referencia como es la cabecera o el menú principal. De esta forma, se evita repetir código. En la figura~\ref{figura:herencia} se muestra el funcionamiento de la herencia de plantillas de Django en Dr. Snap! donde index.html es la plantilla de referencia y *.html, las plantillas hijo que dan contenido al bloque cuerpo heredando todos los demás elementos de index.html.
     
         \begin{figure}[h]
             \centering
@@ -613,7 +628,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
             \label{figura:herencia}
         \end{figure}
         
-    Así resulta un directorio de plantillas para nuestra aplicación web como en la figura ~\ref{figura:template} donde cada una de ellas se cargará con el contenido adecuado según las peticiones que reciba el servidor de Django o las respuestas que proporcione. Esto se consigue gracias a la función de renderizado que nos provee el framework Django y que se explicará más adelante en la parte de \textit{backend}.\\
+    Así resulta un directorio de plantillas para nuestra aplicación web como en la figura~\ref{figura:template} donde cada una de ellas se cargará con el contenido adecuado según las peticiones que reciba el servidor de Django o las respuestas que proporcione. Esto se consigue gracias a la función de renderizado que nos provee el framework Django y que se explicará más adelante en la parte de \textit{backend}.\\
       \begin{figure}[h]
             \centering
             \includegraphics[scale=0.245]{img/plantillas.png}
@@ -622,7 +637,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
         \end{figure}
     \item \textbf{CSS}:
     
-    Como ya explicamos, el CSS es un lenguaje de estilo que proporciona las propiedades de apariencia de los elementos definidos en las plantillas HTML. Por ejemplo, en la figura ~\ref{figura:cssyhtml} vemos como se vería la página sin CSS y con CSS. 
+    Como ya explicamos, el CSS es un lenguaje de estilo que proporciona las propiedades de apariencia de los elementos definidos en las plantillas HTML. Por ejemplo, en la figura~\ref{figura:cssyhtml} vemos como se vería la página sin CSS y con CSS. 
     \\
     \begin{figure}[h]
             \centering
@@ -631,7 +646,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
             \label{figura:cssyhtml}
         \end{figure}
     
-    Así, para dar estilo al botón de analyze del formulario lo definiríamos en CSS como aparece en la figura ~\ref{figura:boton}, donde se hace referencia al elemento button (etiqueta en HTML) y se escriben las propiedades que queremos que tenga como es el color, el tamaño o la letra.\\
+    Así, para dar estilo al botón de analyze del formulario lo definiríamos en CSS como aparece en la figura~\ref{figura:boton}, donde se hace referencia al elemento button (etiqueta en HTML) y se escriben las propiedades que queremos que tenga como es el color, el tamaño o la letra.\\
     
       \begin{figure}[h]
             \centering
@@ -643,7 +658,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     \item \textbf{CLIP STUDIO PAINT PRO}:
     
-    Programa de ilustración digital que se ha utilizado para diseñar el logo y algunas imágenes. Para este programa se ha requerido el conocimiento básico de diseño de viñetas, aplicación de tonos y texturas y del manejo de diferentes capas. Para el logo me he basado en el muñeco original de Snap! y le he añadido unas gafas, cejas, una corbata, un reloj y una lupa para darle un toque de profesor. En la figura ~\ref{figura:logos} se puede ver la comparación de ambos. 
+    Programa de ilustración digital que se ha utilizado para diseñar el logo y algunas imágenes. Para este programa se ha requerido el conocimiento básico de diseño de viñetas, aplicación de tonos y texturas y del manejo de diferentes capas. Para el logo me he basado en el muñeco original de Snap! y le he añadido unas gafas, cejas, una corbata, un reloj y una lupa para darle un toque de profesor. En la figura~\ref{figura:logos} se puede ver la comparación de ambos. 
     \\
         \begin{figure}[h]
             \centering
@@ -655,7 +670,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     \item \textbf{JAVASCRIPT}:
     
-    Se ha usado JavaScript para implementar un conjunto de dashboards. Un dashboard es un gráfico que muestra datos en forma de gráficos (diagrama de barras, de línea o donuts, por ejemplo) y con ello ver un resumen de los datos para poder estudiarlos y analizar posibles tendencias . En esta aplicación se han desarrollado tres de ellos gracias a javascript y a su librería de código abierto Chart.js que admite 8 tipos de gráficos y es responsive. De los tipos que proporciona hemos seleccionado el gráfico de barras y el gráfico de donut. Esta librería, además de implementar dichos gráficos, permite la configuración y la interacción con ellos. Por ejemplo, se puede cambiar los colores de los gráficos, poner nombres a cada eje, añadir animaciones o gestionar todo tipo de eventos. Por ejemplo en la figura ~\ref{figura:js} se observa un gráfico circular.
+    Se ha usado JavaScript para implementar un conjunto de dashboards. Un dashboard es un gráfico que muestra datos en forma de gráficos (diagrama de barras, de línea o donuts, por ejemplo) y con ello ver un resumen de los datos para poder estudiarlos y analizar posibles tendencias. En esta aplicación se han desarrollado tres de ellos gracias a javascript y a su librería de código abierto Chart.js que admite 8 tipos de gráficos y es responsive. De los tipos que proporciona hemos seleccionado el gráfico de barras y el gráfico de donut. Esta librería, además de implementar dichos gráficos, permite la configuración y la interacción con ellos. Por ejemplo, se puede cambiar los colores de los gráficos, poner nombres a cada eje, añadir animaciones o gestionar todo tipo de eventos. Por ejemplo en la figura~\ref{figura:js} se observa un gráfico circular.
     \begin{figure}[h]
             \centering
             \includegraphics[scale=0.25]{img/pie.PNG}
@@ -672,7 +687,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     Hemos descargado Django versión 3.1.1 y Python 3.8.5 para el desarrollo de la aplicación web. Como hemos mencionado Django será el entorno que nos permitirá crear la aplicación web de una forma muy sencilla. 
     
-    Cuando nos creamos una aplicación en Django, lo primero que tenemos que hacer es configurar los diferentes módulos que hay. En la figura ~\ref{figura:carpetas} podemos ver una representación de las carpetas y módulos más importantes que hay en un proyecto de Django: la carpeta llamada ``myproject"\ contiene todos los módulos y archivos que gestionan el proyecto, la carpeta de nombre ``myfirstapp"\ contiene todos los módulos y archivos que gestionan la aplicación web, el archivo ``db.sqlite3"\ es la base de datos, la carpeta "media"\ es la que contiene todos los zips que los profesores suben, la carpeta ``template"\ es en la que se guardan todas las plantillas HTML y el archivo ``manage.py"\ es el manejador que se ejecuta, por ejemplo, para lanzar la aplicación o para crear nuevas migraciones.
+    Cuando nos creamos una aplicación en Django, lo primero que tenemos que hacer es configurar los diferentes módulos que hay. En la figura~\ref{figura:carpetas} podemos ver una representación de las carpetas y módulos más importantes que hay en un proyecto de Django: la carpeta llamada ``myproject'' contiene todos los módulos y archivos que gestionan el proyecto, la carpeta de nombre ``myfirstapp'' contiene todos los módulos y archivos que gestionan la aplicación web, el archivo ``db.sqlite3'' es la base de datos, la carpeta ``media'' es la que contiene todos los zips que los profesores suben, la carpeta ``template'' es en la que se guardan todas las plantillas HTML y el archivo ``manage.py'' es el manejador que se ejecuta, por ejemplo, para lanzar la aplicación o para crear nuevas migraciones.
      \begin{figure}[h]
             \centering
             \includegraphics[scale=0.6]{img/carpetas.PNG}
@@ -683,7 +698,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     Veamos los módulos más importantes con mayor profundidad:
     \begin{itemize}
         \item settings.py: se debe configurar el nombre de la aplicación que has creado, los servidores que están permitidos, como es en nuestro caso \textit{pythonanywhere} o \textit{mylocalhost}; todos los paths o rutas donde encontrar los archivos estáticos, las plantillas u otros; la base de datos que queremos utilizar (por defecto, utiliza sqlite3) e incluso hay que configurar datos como la zona horaria o el idioma.
-        \item urls.py: en este módulo definimos las posibles urls que vamos a encontrar en nuestra aplicación web y especificamos la vista asociada a dicho path url. En la tabla ~\ref{Tabla:paths} podemos ver un resumen de las distintas urls que hemos definido con su vista asociada y la funcionalidad que tienen.
+        \item urls.py: en este módulo definimos las posibles urls que vamos a encontrar en nuestra aplicación web y especificamos la vista asociada a dicho path url. En la tabla~\ref{Tabla:paths} podemos ver un resumen de las distintas urls que hemos definido con su vista asociada y la funcionalidad que tienen.
         
         \begin{table}[]
         \centering
@@ -712,8 +727,8 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
         
         
         
-        \item views.py: son las funciones que reciben una petición HTTP, deben devolver una respuesta HTTP y están asociadas a un path de url como hemos explicado anteriormente. El ORM de Django recibe un path con una petición, mapea en el listado de urls a qué vista corresponde y se ejecuta dicha función para devolver la respuesta correcta renderizada con una de las plantillas HTML. Es decir, por ejemplo, si hacemos desde el navegador una petición GET para el recurso /analyze, la función vista analyze nos devolverá la respuesta HTTP definida en la función renderizada con la plantilla que hicimos para dicho recurso. La figura ~\ref{figura:MVC} resume lo explicado. También se pueden hacer redirecciones a otras páginas ,en caso de error mostrar página 404 o, incluso, pasar datos a las plantillas.
-        \item models.py: se definen las clases  y sus respectivos campos para la base de datos. En nuestra aplicación web tendremos tres clases: usuario, proyectos y el tipo de usuario (profesor o estudiante). En la figura ~\ref{figura:models} queda reflejado las 3 clases y sus campos correspondientes. Cabe destacar que la clase user ya viene implementada por el sistema de autenticación de usuarios de Django (en ``django.contrib.auth"), el cual proporciona funciones como login, logout o signup o la clase \textit{models.user}.
+        \item views.py: son las funciones que reciben una petición HTTP, deben devolver una respuesta HTTP y están asociadas a un path de url como hemos explicado anteriormente. El ORM de Django recibe un path con una petición, mapea en el listado de urls a qué vista corresponde y se ejecuta dicha función para devolver la respuesta correcta renderizada con una de las plantillas HTML. Es decir, por ejemplo, si hacemos desde el navegador una petición GET para el recurso /analyze, la función vista analyze nos devolverá la respuesta HTTP definida en la función renderizada con la plantilla que hicimos para dicho recurso. La figura~\ref{figura:MVC} resume lo explicado. También se pueden hacer redirecciones a otras páginas, en caso de error mostrar página 404 o, incluso, pasar datos a las plantillas.
+        \item models.py: se definen las clases  y sus respectivos campos para la base de datos. En nuestra aplicación web tendremos tres clases: usuario, proyectos y el tipo de usuario (profesor o estudiante). En la figura~\ref{figura:models} queda reflejado las tres clases y sus campos correspondientes. Cabe destacar que la clase user ya viene implementada por el sistema de autenticación de usuarios de Django (en ``django.contrib.auth''), el cual proporciona funciones como login, logout o signup o la clase \textit{models.user}.
            \begin{figure}[h]
             \centering
             \includegraphics[scale=0.45]{img/models.PNG}
@@ -724,7 +739,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     \item \textbf{SQLITE3:}
     
-    Como hemos dicho previamente, nuestra base de datos será la que viene por defecto en Django, es decir, sqlite3. Es una base de datos sencilla y para crearla lo primero que debemos es indicarla en settings.py. Una vez definidas las clases en models.py se debe hacer una migración con los cambios hechos para luego migrarla. Cada vez que se cree una clase, se añada un campo nuevo o se elimine se debe hacer una migración que refleje estos cambios y luego migrarla a la base de datos.  En la figura ~\ref{figura:bbdd} se observan todas las tablas que hay creadas, sin embargo, las únicas que hemos creado nosotros, gracias al módulo de models.py, son las que empiezan por el nombre de la aplicación, es decir, \textit{myfirstapp\_proyectos} y \textit{myfirstapp\_tipo}. Todas las demás son implementadas por Django para diferentes funcionalidades, por ejemplo, \textit{auth user} es la tabla que representa la ya comentada clase user que viene ya predefinida con los campos de contraseña, gmail, primer apellido...\\
+    Como hemos dicho previamente, nuestra base de datos será la que viene por defecto en Django, es decir, sqlite3. Es una base de datos sencilla y para crearla lo primero que debemos es indicarla en settings.py. Una vez definidas las clases en models.py se debe hacer una migración con los cambios hechos para luego migrarla. Cada vez que se cree una clase, se añada un campo nuevo o se elimine se debe hacer una migración que refleje estos cambios y luego migrarla a la base de datos.  En la figura~\ref{figura:bbdd} se observan todas las tablas que hay creadas, sin embargo, las únicas que hemos creado nosotros, gracias al módulo de models.py, son las que empiezan por el nombre de la aplicación, es decir, \textit{myfirstapp\_proyectos} y \textit{myfirstapp\_tipo}. Todas las demás son implementadas por Django para diferentes funcionalidades, por ejemplo, \textit{auth user} es la tabla que representa la ya comentada clase user que viene ya predefinida con los campos de contraseña, gmail, primer apellido...\\
     
        \begin{figure}[h]
             \centering
@@ -737,16 +752,16 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     Para lanzar la aplicación de Django en pythonanywhere lo primero que debes hacer es crearte una cuenta de forma gratuita y clonar tu proyecto que debe estar previamente subido a github. El siguiente paso es crearte un entorno virtual y descargar Django. Hay que configurar los paths del directorio donde está el código, las templates y los recursos estáticos. Una vez hecho todo esto ya tenemos disponible nuestra aplicación web durante 3 meses, en nuestro caso,  en  http://prodriguezmartin.pythonanywhere.com
     
-    Una vez que lancé la aplicación web al probarla tenía un error que impedía usarla: no dejaba hacer peticiones ni redirecciones a otros sitios webs a no ser que estos estuvieran en la \textit{whitelist} de pythonanywhere o que mi cuenta fuese de pago. Para solucionar el problema, me puse en contacto con los técnicos y conseguí, tras mucha insistencia, añadir el dominio de https://cloud.snap.berkeley.edu/ a la \textit{whitelist} ya que me denegaron el dominio de https://snap.berkeley.edu/ lo que supuso algunos cambios mínimos en el código de la aplicación web.
+    Una vez que lancé la aplicación web al probarla tenía un error que impedía usarla: no dejaba hacer peticiones ni redirecciones a otros sitios webs a no ser que estos estuvieran en la \textit{whitelist} de pythonanywhere o que mi cuenta fuese de pago. Para solucionar el problema, me puse en contacto con los técnicos y conseguí, tras mucha insistencia, añadir el dominio de \url{https://cloud.snap.berkeley.edu/} a la \textit{whitelist} ya que me denegaron el dominio de https://snap.berkeley.edu/ lo que supuso algunos cambios mínimos en el código de la aplicación web.
 
 \end{enumerate}
 
 \section{Funcionalidades de Dr. Snap!}
 En este apartado vamos a explicar todas las funciones que he implementado para que la aplicación web cumpla su cometido como herramienta docente. Estas siguen un orden cronológico ya que algunas han surgido con el objetivo de mejorar o complementar otras.
 \subsection{Analizar proyectos}
-Para analizar un proyecto se necesita la URL del proyecto de Snap! y así conseguir el XML donde viene guardada la información de bloques, scripts y sprites del proyecto. La URL se consigue a través de un formulario como el de la figura ~\ref{figura:xml}. Una vez que tenemos la URL, se pensó que habría que interactuar con la API de Snap!, sin embargo, tras ver el código fuente descubrimos que no es necesario ya que existe una función implementada en JavaScript que te devuelve el XML simplemente haciendo un GET con el recurso /projects/user\_name/project\_name a Snap! Berkeley. 
+Para analizar un proyecto se necesita la URL del proyecto de Snap! y así conseguir el XML donde viene guardada la información de bloques, scripts y sprites del proyecto. La URL se consigue a través de un formulario como el de la figura~\ref{figura:xml}. Una vez que tenemos la URL, se pensó que habría que interactuar con la API de Snap!, sin embargo, tras ver el código fuente descubrimos que no es necesario ya que existe una función implementada en JavaScript que te devuelve el XML simplemente haciendo un GET con el recurso /projects/user\_name/project\_name a Snap! Berkeley. 
 
-En la figura ~\ref{figura:xml} se ven los pasos necesarios para conseguir los datos de un proyecto de Snap! Berkeley: el usuario envía la URL de su proyecto a través de un POST, se parsea la URL, se forma la nueva URL y se hace una petición GET con esa URL a Snap! Berkeley; el cual, nos devuelve el XML correspondiente.
+En la figura~\ref{figura:xml} se ven los pasos necesarios para conseguir los datos de un proyecto de Snap! Berkeley: el usuario envía la URL de su proyecto a través de un POST, se parsea la URL, se forma la nueva URL y se hace una petición GET con esa URL a Snap! Berkeley; el cual, nos devuelve el XML correspondiente.
 
   \begin{figure}[h]
             \centering
@@ -758,7 +773,7 @@ En la figura ~\ref{figura:xml} se ven los pasos necesarios para conseguir los da
  Una vez que tenemos el XML tenemos que parsearlo para poder obtener todos los datos necesarios y, para ello, hemos hecho uso de la API xml.sax. Un archivo XML es un texto compuesto de etiquetas creado para formar una estructura de datos e información. Gracias al ContentHandler y al parser de xml.sax podemos acceder a cada etiqueta y a su contenido. Para ello, la clase ContentHandler define 3 funciones muy importantes:
  \begin{itemize}
      \item  def \_\_init\_\_ (self) en la que se deben inicializar todas las variables.
-     \item def startElement (self, name, attrs) es la función que encuentra inicios de etiqueta XML, donde name se convierte en el nombre de la etiqueta y attrs en los atributos que hay en la etiqueta. Por ejemplo, block s=``move"\ el nombre de la etiqueta es block, el atributo es s y su valor es move. En este punto guardaremos en un diccionario JSON los atributos y valores correspondientes  según necesitemos. Se ha tomado la decisión de trabajar con JSON porque es mucho más sencillo y rápido.
+     \item def startElement (self, name, attrs) es la función que encuentra inicios de etiqueta XML, donde name se convierte en el nombre de la etiqueta y attrs en los atributos que hay en la etiqueta. Por ejemplo, block s=``move'' el nombre de la etiqueta es block, el atributo es s y su valor es move. En este punto guardaremos en un diccionario JSON los atributos y valores correspondientes  según necesitemos. Se ha tomado la decisión de trabajar con JSON porque es mucho más sencillo y rápido.
      \item def endElement(self, name) es la función que se encuentra con el cierre de etiquetas XML y sirve para saber que ya  has avanzado a otra etiqueta.
 
  \end{itemize}
@@ -769,7 +784,7 @@ En la figura ~\ref{figura:xml} se ven los pasos necesarios para conseguir los da
      \item Definir las funciones del ContentHandler y añadírselas al parser con setContentHandler(theHandler).
      \item Parsear la url donde se encuentra el archivo XML con el parser ya definido.
  \end{itemize}
-Este paso puede que haya sido el más complicado de todos pues los proyectos de Snap! tienen una estructura XML más o menos similar pero no llega a ser única por lo que al intentar analizar las etiquetas resultó difícil porque no todos los proyectos encajaban con lo que había definido. En la figura ~\ref{figura:tree} se refleja el esquema de etiquetas que se ha supuesto y cómo lo hemos guardado. Con esta estructura pretendemos poder guardar en un JSON solamente  los sprites que hay, los scripts y los bloques que se utilizan. Como extra se han guardado las variables y los bloques que puede crear un usuario. \\
+Este paso puede que haya sido el más complicado de todos pues los proyectos de Snap! tienen una estructura XML más o menos similar pero no llega a ser única por lo que al intentar analizar las etiquetas resultó difícil porque no todos los proyectos encajaban con lo que había definido. En la figura~\ref{figura:tree} se refleja el esquema de etiquetas que se ha supuesto y cómo lo hemos guardado. Con esta estructura pretendemos poder guardar en un JSON solamente  los sprites que hay, los scripts y los bloques que se utilizan. Como extra se han guardado las variables y los bloques que puede crear un usuario. \\
 El JSON se compone de 4 listas (sprites, variables, block-definition y name block-definition) que contienen diccionarios con sus datos. Por ejemplo, en sprites se guardan diccionarios por cada bloque parseado con los campos nº sprite, nº script, block y nº block.
 \\
 \begin{figure}[h]
@@ -798,7 +813,7 @@ Una vez que los datos se han guardado en el JSON, se procedió a implementar la 
 \label{tabla:rubrica}
 \end{table}
 \subsection{Usuarios}
-Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta y así poder guardar todos los proyectos analizados en la base de datos. Para ello, se implementó en primer lugar la opción de iniciar y cerrar sesión gracias a las funciones de login y logout que ofrece Django en su sistema de autenticación (django.contrib.auth.models). Este sistema permite distinguir cuando un usuario está autenticado y cuando no, pudiendo hacer funciones exclusivamente para usuarios como es el caso del recurso /projects que muestra los proyectos que el usuario ha analizado previamente. Sin embargo, para crear usuarios se tenía que gestionar desde el recurso /admin y solo lo podía hacer el superusuario, por lo que se añadió la opción de hacerse una cuenta. Se puede importar un formulario para crear usuario que ya viene predefinido (pero de aspecto modificable) en django.contrib.auth.models y con él, un usuario se registra y solo faltaría que en la función de signup autenticásemos ese usuario y lo iniciásemos sesión directamente. En la figura ~\ref{figura:sign} se observa la página de iniciar sesión y la de hacerse una cuenta. Cabe destacar que se implementó que si el usuario estaba logueado apareciese un recuadro arriba de todas las  páginas con la opción de cerrar sesión.
+Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta y así poder guardar todos los proyectos analizados en la base de datos. Para ello, se implementó en primer lugar la opción de iniciar y cerrar sesión gracias a las funciones de login y logout que ofrece Django en su sistema de autenticación (django.contrib.auth.models). Este sistema permite distinguir cuando un usuario está autenticado y cuando no, pudiendo hacer funciones exclusivamente para usuarios como es el caso del recurso /projects que muestra los proyectos que el usuario ha analizado previamente. Sin embargo, para crear usuarios se tenía que gestionar desde el recurso /admin y solo lo podía hacer el superusuario, por lo que se añadió la opción de hacerse una cuenta. Se puede importar un formulario para crear usuario que ya viene predefinido (pero de aspecto modificable) en django.contrib.auth.models y con él, un usuario se registra y solo faltaría que en la función de signup autenticásemos ese usuario y lo iniciásemos sesión directamente. En la figura~\ref{figura:sign} se observa la página de iniciar sesión y la de hacerse una cuenta. Cabe destacar que se implementó que si el usuario estaba logueado apareciese un recuadro arriba de todas las  páginas con la opción de cerrar sesión.
 
 \begin{figure}[h]
 \centering
@@ -807,7 +822,7 @@ Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta
             \label{figura:sign}
     \end{figure}
 \subsection{Modo profesor o estudiante}
-Con la anterior opción se conseguía tener una base de datos con los proyectos analizados de los usuarios pero Dr. Snap! pretende ir más allá que analizar solo proyectos, como herramienta docente debe aportar distintas funcionalidades según el tipo de usuario que seas. Surge así, la distinción entre si eres estudiante o eres un profesor. Para ello se crea el modelo ``tipo" que ya hemos mencionado donde se asocia el usuario con el tipo de usuario. Se implementa de forma que al darle al enlace de ``hacerse una cuenta", mostrado en la figura ~\ref{figura:sign}, te lleve al recurso /type-signup donde tienes dos formularios para elegir si eres estudiante o profesor. Una vez que seleccionas el tipo, la nueva entrada se guarda en la base de datos y se te redirige a la página de registro de la figura ~\ref{figura:sign}. Esta funcionalidad queda reflejada en la figura ~\ref{figura:tipo}. A continuación, se definen las prestaciones de casa modo:
+Con la anterior opción se conseguía tener una base de datos con los proyectos analizados de los usuarios pero Dr. Snap! pretende ir más allá que analizar solo proyectos, como herramienta docente debe aportar distintas funcionalidades según el tipo de usuario que seas. Surge así, la distinción entre si eres estudiante o eres un profesor. Para ello se crea el modelo ``tipo'' que ya hemos mencionado donde se asocia el usuario con el tipo de usuario. Se implementa de forma que al darle al enlace de ``hacerse una cuenta'', mostrado en la figura~\ref{figura:sign}, te lleve al recurso /type-signup donde tienes dos formularios para elegir si eres estudiante o profesor. Una vez que seleccionas el tipo, la nueva entrada se guarda en la base de datos y se te redirige a la página de registro de la figura~\ref{figura:sign}. Esta funcionalidad queda reflejada en la figura~\ref{figura:tipo}. A continuación, se definen las prestaciones de casa modo:
 
 \begin{itemize}
     \item Estudiante: tiene la opción de analizar sus proyectos y de ver gráficos con los proyectos analizados según los niveles obtenidos.
@@ -822,12 +837,12 @@ Con la anterior opción se conseguía tener una base de datos con los proyectos 
     \end{figure}
     
 \subsection{Analizar ZIPs}
-Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por el usuario de tipo profesor. En la función de analizar proyectos, si estás logueado como profesor aparece un nuevo formulario en el que se ha implementado la posibilidad de importar un ZIP desde el ordenador. Para trabajar con el archivo comprimido hemos utilizado la librería ``FileSystemStorage"\ importada de ``django.core.files.storage "\ y con la librería ``zipFile". De primeras, se dudó si trabajar con el archivo en local o en disco. Al final, me decanté por guardarlo en disco y trabajar con él ya que era menos complejo. En la figura ~\ref{figura:zip} se muestra las opciones que ofrece la página analizar en caso de ser profesor. Los pasos para esta funcionalidad son los siguientes:
+Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por el usuario de tipo profesor. En la función de analizar proyectos, si estás logueado como profesor aparece un nuevo formulario en el que se ha implementado la posibilidad de importar un ZIP desde el ordenador. Para trabajar con el archivo comprimido hemos utilizado la librería ``FileSystemStorage'' importada de ``django.core.files.storage'' y con la librería ``zipFile''. De primeras, se dudó si trabajar con el archivo en local o en disco. Al final, me decanté por guardarlo en disco y trabajar con él ya que era menos complejo. En la figura~\ref{figura:zip} se muestra las opciones que ofrece la página analizar en caso de ser profesor. Los pasos para esta funcionalidad son los siguientes:
 \begin{itemize}
-    \item Guardar el archivo ZIP  en la carpeta llamada media, vista en la figura ~\ref{figura:carpetas}. Esto se consigue con una función de ``FileSystemStorage" llamada ~\textit{fs.save()}.
-    \item Quedarnos con la url donde se encuentra el ZIP con la función ~\textit{fs.url()}.
-    \item Descomprimir el ZIP con ``zipFile"\ en una carpeta que se hace llamar: \textit{nombredeusuario\&nombredelarchivo } con la función ~\textit{fs.urlextractall (password, path)}.
-    \item Analizar cada proyecto calculando las puntuaciones y guardando los datos en la base de datos. En este punto, es cuando se decide añadir un campo del modelo \textit{proyecto} que se llamó \textit{nombre\_zip} ya que de esta forma los proyectos que no pertecen a a ningún ZIP simplemente  este campo se pondría a NULL.
+    \item Guardar el archivo ZIP  en la carpeta llamada media, vista en la figura~\ref{figura:carpetas}. Esto se consigue con una función de ``FileSystemStorage'' llamada~\textit{fs.save()}.
+    \item Quedarnos con la url donde se encuentra el ZIP con la función~\textit{fs.url()}.
+    \item Descomprimir el ZIP con ``zipFile'' en una carpeta que se hace llamar: \textit{nombredeusuario\&nombredelarchivo } con la función~\textit{fs.urlextractall (password, path)}.
+    \item Analizar cada proyecto calculando las puntuaciones y guardando los datos en la base de datos. En este punto es cuando se decide añadir un campo del modelo \textit{proyecto} que se llamó \textit{nombre\_zip} ya que de esta forma los proyectos que no pertecen a a ningún ZIP simplemente  este campo se pondría a NULL.
 \end{itemize}
 \begin{figure}[h]
 \centering
@@ -836,16 +851,16 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
             \label{figura:zip}
     \end{figure}
 \subsection{Dashboard}
-    Los 3 dashboard que tenemos son los que enseñamos en la figura ~\ref{figura:dshboard2} y otro más donde se compara los resultados de dos ZIPs que se hayan subido a la aplicación (figura ~\ref{figura:dshboard2}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
+    Los 3 dashboard que tenemos son los que enseñamos en la figura~\ref{figura:dshboard2} y otro más donde se compara los resultados de dos ZIPs que se hayan subido a la aplicación (figura~\ref{figura:dshboard2}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
     \begin{itemize}
-        \item Estudiante: sólo están disponibles los gráficos de la figura ~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno a analizado en Dr. Snap! en un diagrama de barras y en donut.\\
+        \item Estudiante: sólo están disponibles los gráficos de la figura~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno a analizado en Dr. Snap! en un diagrama de barras y en donut.\\
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{img/dashboard.PNG}
             \caption{Dashboard de barra y de donut.}
             \label{figura:dshboard2}
         \end{figure}
-        \item Profesor: además de los mencionados, se da la opción de ver los gráficos con los datos de una clase o incluso comparar un gráfico con dos clases diferentes (figura ~\ref{figura:dshboard}). Cuando hablamos de clase se debe entender como un ZIP con los proyectos de los alumnos de una clase y que esta se ha analizado previamente gracias a la opción que damos de analizar ZIP.¡
+        \item Profesor: además de los mencionados, se da la opción de ver los gráficos con los datos de una clase o incluso comparar un gráfico con dos clases diferentes (figura~\ref{figura:dshboard}). Cuando hablamos de clase se debe entender como un ZIP con los proyectos de los alumnos de una clase y que esta se ha analizado previamente gracias a la opción que damos de analizar ZIP.
          \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{img/comparar.PNG}
@@ -854,7 +869,7 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
         \end{figure}
        
     \end{itemize}
-    Para implementarlos hemos tenido que añadir un elemento ``canvas"~ de HTML que básicamente es un contenedor donde se dibujan los gráficos gracias a la librería de JavaScript ya mencionada ``Chart.js". Una vez que dichos gráficos estaban implementados, se ha añadido la funcionalidad de que si haces click en una de las barras, por ejemplo en la azul de basic, te redirija a una tabla donde aparecen todos los proyectos de nivel básico. Esto ha requerido el aprendizaje de la programación basada en eventos ya que hacer click en la pantalla es un evento llamado onClick y hay que manejarlo para que distinga si estás pinchando dentro del elemento \textit{canvas}, si es fuera de las barras o porciones del donut y en caso de que sea dentro de ellas, distinguir qué nivel está pinchando.
+    Para implementarlos hemos tenido que añadir un elemento ``canvas'' de HTML que básicamente es un contenedor donde se dibujan los gráficos gracias a la librería de JavaScript ya mencionada ``Chart.js''. Una vez que dichos gráficos estaban implementados, se ha añadido la funcionalidad de que si haces click en una de las barras, por ejemplo en la azul de basic, te redirija a una tabla donde aparecen todos los proyectos de nivel básico. Esto ha requerido el aprendizaje de la programación basada en eventos ya que hacer click en la pantalla es un evento llamado onClick y hay que manejarlo para que distinga si estás pinchando dentro del elemento \textit{canvas}, si es fuera de las barras o porciones del donut y en caso de que sea dentro de ellas, distinguir qué nivel está pinchando.
 
 
 
