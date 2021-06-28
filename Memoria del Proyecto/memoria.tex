@@ -214,56 +214,19 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \pagenumbering{arabic} % para empezar la numeración de página con números
 Con el avance de las tecnologías, la programación y el pensamiento computacional se han extendido de tal forma que ya se incluyen en el temario de educación secundaria obligatoria. Un programa no es más que un conjunto de sentencias que dan instrucciones a un ordenador y es necesario aprender un lenguaje de programación con el que escribirlas.
 
-{\color{red} Aquí deberías hablar un poco de qué va tu TFG. Al menos un par de párrafos}
+Este trabajo de fin de grado gira entorno a una plataforma de programación interactiva denominada Snap! Berkeley. En ella los usuarios crean programas a partir de bloques ya definidos o creando tus propios bloques. Además, ofrece la opción de subir todos tus proyectos y cuenta con un forum, con tutoriales y con un manual de referencia. Se creará una aplicación web en la que los usuarios puedan subir el proyecto creado en Snap! para ser analizado y poder obtener resultados basados en su nivel de programación. 
+
+La aplicación web se llamará Dr. Snap! y surge de la ya implementada herramienta web Dr. Scratch que analiza proyectos de la plataforma Scratch. A raíz de Scratch se desarrolló Snap! Berkeley como extensión y mejora, por lo que Dr. Snap y Dr. Scratch giran ambos entorno a la misma idea y funcionalidad. Sin embargo, este proyecto pretende ser completamente independiente y con ideas nuevas y originales.
+
+Con la intención de ser una herramienta con carácter académica, se desarrollará tanto para estudiantes como para profesores con el objetivo de que aprendan los estudiantes a programar de forma óptica, clara y concisa y a los profesores para facilitarles el trabajo de corrección.
 
 \section{Conceptos básicos de programación}
-\label{sec:conceptos basicos}
-
-\subsection{Lenguajes de programación}
-\label{subsec:estilo}
-Tenemos tres tipos de lenguaje~\cite{aguilar1988fundamentos}:
-\begin{itemize}
-    \item Lenguaje máquina: instrucciones que la máquina entiende directamente.
-    \item Lenguaje de bajo nivel: instrucciones más sencillas pero que necesitan ser traducidas a lenguaje máquina. Dependen del tipo de computadora.
-    \item Lenguaje de alto nivel: sentencias muy simples y parecidas al lenguaje humano, independiente de la computadora y necesitan un compilador o intérprete. Nos centraremos en este tipo de lenguaje ya que es el que se usa en programación básica.
-    
-\end{itemize} 
-
-\begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.6]{img/lenguajesprograma.png}
-        \caption{Lenguajes de programación}
-        \label{figura:lenguaje programación}
-    \end{figure}
-
-
-Para programar, antes de escribir las sentencias en un lenguaje de programación como Python o Java, se recomienda escribirlo en pseudocógido. En la figura~\ref{figura:lenguaje programación} se observa las formas de conseguir el código máquina del ordenador.
-\subsection{Pseudocódigo y diagrama de control}
-EL pseudocódigo es un paso intermedio entre el lenguaje humano y el lenguaje máquina.  Define la lógica y las estructuras de control sin seguir ningún lenguaje de programación y, sirve para pensar cómo abordar un problema de programación desarrollando un algoritmo. Los pasos principales de un algoritmo son~\cite{duque2017algoritmos}:
-\begin{itemize}
-    \item Inicio
-    \item Ingresar/obtener los datos necesarios
-    \item Desarrollar los procesos (cálculos, resolución...)
-    \item Resultados
-    \item Fin
-\end{itemize}
-
-Otra forma de abordar el problema es con un diagrama de flujo o control. En él se definen los pasos del algoritmo escritos en unas cajas unidas por flechas, denominadas líneas de flujo, que indican la secuencia en que se debe ejecutar~\cite{albertodiapositivas}. 
-
-Es conveniente usar ambos a la vez como herramientas de ayuda. Un ejemplo de pseudocódigo y de diagrama de flujo sería el que viene en la figura \ref{figura:pseudocodigo}. En él se puede comprobar como son complementarios y de gran ayuda para poder definir los algoritmos de los programas.
-\begin{figure}[h]
-
-        \centering
-        \includegraphics[scale=0.35]{img/flujo.png}
-        \caption{Ejemplo de pseudocódigo y diagrama de control}
-        \label{figura:pseudocodigo}
-    \end{figure}
-
-{\color{red} Yo estas partes de los lenguajes de programación y el pseudocódigo no las veo, y menos en la intro}
 
 \subsection{Programación en bloques}
-A raíz del desarrollo que se ha producido en la docencia de los fundamentos de programación y en las TIC, surge el concepto de ludificación. ``Esta {\color{red} ¿Esta?} es un método con la finalidad de crear una experiencia  significativa y motivadora a través de la integración de mecánicas de juego en entornos y aplicaciones no lúdicas''~\cite{lopez2017pensamiento}. La programación en bloques consiste en crear programas encajando unas piezas  predefinidas que permiten hacer funciones o procedimientos sin necesidad de un lenguaje de programación. Tiene similitudes al pseudocódigo y al diagrama de control. Es un tipo de enseñanza activa que promueve el pensamiento computacional, las diferentes formas de analizar y abordar los problemas y el diseño constructivo visual.
-En este ámbito, Scracth es una de las plataformas virtuales más conocidas. En ella se pueden crear programas como se indica en la figura~\ref{figura:scratch} donde se observan diferentes bloques con funciones distintas.
+A raíz del desarrollo que se ha producido en la docencia de los fundamentos de programación y en las TIC, surge el concepto de ludificación. ``La ludificación es un método con la finalidad de crear una experiencia  significativa y motivadora a través de la integración de mecánicas de juego en entornos y aplicaciones no lúdicas''~\cite{lopez2017pensamiento}.~Es decir, debe crear un entorno atractivo que promueva la diversión combinada con el aprendizaje y la actividad cognitiva  buscando siempre la motivación interna de los participantes~\cite{vsimko2014ludificacion}. En nuestro contexto, el sistema de ludificación es la plataforma de lenguaje visual previamente mencionada Snap! Berkeley en la que los participantes programan a través de bloques funcionales.
+
+La programación en bloques consiste en crear programas encajando unas piezas  predefinidas que permiten hacer funciones o procedimientos sin necesidad de un lenguaje de programación. Tiene similitudes al pseudocódigo y al diagrama de control. Es un tipo de enseñanza activa que promueve el pensamiento computacional, las diferentes formas de analizar y abordar los problemas y el diseño constructivo visual.
+En este ámbito, Scracth es una de las plataformas virtuales más conocidas y permite la implementación de juegos, animaciones e historias. En ella se pueden crear programas como se indica en la figura~\ref{figura:scratch} donde se observan diferentes bloques con funciones distintas.
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.55]{img/scratch.png}
@@ -276,7 +239,7 @@ El pensamiento computacional es ``el proceso de pensamiento que interviene en la
 \begin{enumerate}[1)]
     \item Paralelismo: sucesión simultánea de varias instrucciones o acciones. Por ejemplo, se necesitaría paralelismo si quisiésemos que dos personajes giren 15º a la vez.
     \item Condicionales: cuando las instrucciones se pueden ejecutar o no en función del resultado de una condición. Los condicionales más típicos, entre ellos, se incluyen los operadores lógicos (and, or, not).
-    \item Control de flujo: hace referencia al orden en el que se ejecutan las instrucciones. El orden más natural sería que la instrucciones fuesen ejecutándose una a una pero también se debe incluir la opción de ejecutar un conjunto de instrucciones hasta que suceda otro evento o las veces que queramos (hablamos de bucles).
+    \item Control de flujo: hace referencia al orden en el que se ejecutan las instrucciones. El orden natural en un programa sería que la instrucciones fuesen ejecutándose una a una. Sin embargo, también se debe incluir la opción de ejecutar un conjunto de instrucciones hasta que suceda otro evento o que las instrucciones se ejecuten las veces que queramos (hablamos de bucles).
     \item Abstracción: se consigue dividiendo un problema grande en pequeños conjuntos más sencillos y simples separando en scripts o creando bloques definidos.
     \item Sincronización: supone el ajuste temporal de diferentes eventos. Es decir, cuando se desea ejecutar una instrucción una vez ha terminado otra se requiere que ambos eventos estén sincronizados.
     \item Interactividad con el usuario. Así, conseguimos hacer intervenir al usuario de alguna forma como puede ser introducir un nombre o pulsar una tecla.
@@ -286,81 +249,24 @@ El pensamiento computacional es ``el proceso de pensamiento que interviene en la
 
 \section{Snap! Berkeley}
 
-{\color{red} Algo de Snap! puedes hablar en la intro. Pero no tan extenso. El detalle debería ir en el capítulo de estado del arte.}
-
-Es una plataforma virtual que se programó en JavaScript como extensión de la ya mencionada plataforma Scratch. ~Snap! define un lenguaje de programación visual que permite programar por bloques. Como novedades implementa listas avanzadas y permite crear bloques definidos  más potentes. Para entender el funcionamiento de Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
-\begin{itemize}
-    
-    \item Block: existen diferentes clasificaciones. \begin{enumerate}[1)]
-        \item Según las categorías:
-   
-            \begin{enumerate}[a)]
-                \item Motion: bloques que permiten dar movimiento al sprite o personaje.
-                \item Looks: permite cambiar las propiedades de apariencia del personaje.
-                \item Sound: permite añadir sonidos, cambiar el volumen...
-                \item Pen: permite pintar líneas o crear estampas del sprite.
-                \\
-                    \begin{figure}[h]
-                        \centering
-                        \includegraphics[scale=0.45]{img/4-blocks.png}
-                        \caption{Bloques de tipo motion, look sound y pen respectivamente.}
-                        \label{figura:bloque1}
-                    \end{figure}
-                \item Control: bloques para inicializar los scripts o para hacer bucles.
-                \item Sensing: permite distinguir interacciones como cuando pulsas una tecla o cuando tocas un borde con el ratón.
-                \item Operators: permite hacer operaciones como sumas, multiplicaciones,operaciones lógicas...
-                \item Variables: incluye listas, operaciones con listas, inicialización de variables...
-                \begin{figure}[h]
-                        \centering
-                        \includegraphics[scale=0.5]{img/blo4-2.png}
-                        \caption{Bloques de tipo motion, lookm sound y pen respectivamente.}
-                        \label{figura:bloque2}
-                \end{figure}
-                 \end{enumerate}
-        \item Según su funcionalidad:
-            \begin{enumerate}[a)]
-             \item Command block: se corresponden con bloques que tienen acciones ya definidas.
-             \item Reporter block: proporciona un valor de entrada que será usada en una acción.
-             \item Predicate: es otro tipo de ``reporter block'' ya que devuelve una entrada de tipo True o False. Tiene sentido usarlos en bucles o condicionales.
-            \end{enumerate}
-        \item Según su forma:
-             \begin{enumerate}[a)]
-             \item Hat block: son los que se usan para inicializar un script y solo se pueden poner al principio.
-             \item Brick shape: de forma simple y de tipo command block.
-             \item C shape: es de tipo command pero admite dentro de él otro script o un único brick shape. Se corresponde con los bucles y los condicionales.
-             \item E shape: compuesto con dos bloques C shape.
-             \item Oval shape: se corresponde con los reporter block. Por ejemplos, las variables son óvalos de color naranja.
-             \item Hex shape: se corresponde con los predicate block.
-             \end{enumerate}
-        En la figura~\ref{figura:shape} tenemos varios ejemplos.
-        
-        \begin{figure}[h]
-                        \centering
-                        \includegraphics[scale=0.55]{img/shapes.PNG}
-                        \caption{Bloques según la forma en Snap!}
-                        \label{figura:shape}
-        \end{figure}
-    \end{enumerate}
-
-
-    \item Script: es una pila o agrupación de bloques que se inicializan con los hat blocks y realizan un conjunto de acciones como en la figura~\ref{figura:script}.
-
-     \begin{figure}[h]
+Es una plataforma virtual que se programó en JavaScript como extensión de la ya mencionada plataforma Scratch. ~Snap! define un lenguaje de programación visual que permite programar por bloques. Como novedades implementa listas avanzadas y permite crear bloques definidos  más potentes. La página principal de Snap! se observa en la figura~\ref{figura:ppal_snap} y en ella podemos ver que nos ofrece la opción de correr el programa, de ver ejemplos y de obtener el manual de referencia. En Snap! Berkeley, además de crear programas, se pueden subir estos proyectos a la comunidad de Snap! para que todo el mundo pueda probarlos y ver cómo se han implementado.
+\begin{figure}[h]
         \centering
-        \includegraphics[scale=1]{img/script.PNG}
-        \caption{Script en Snap!}
-        \label{figura:script}
-    \end{figure}
-    
-    \item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.2]{img/sprite.png}
-        \caption{Dos sprites en snap!}
-        \label{figura:sprites}
-    \end{figure}
-\end{itemize}
+        \includegraphics[scale=0.4]{img/snap_ppal.png}
+        \caption{Página principal de Snap! Berkeley}
+        \label{figura:ppal_snap}
+\end{figure}
 
+
+El manual de referencia consta de 11 capítulos y de 2 anexos y en ellos se explica en detalle todo lo relacionado con el manejo de sus bloques para programar. Por ejemplo, el capítulo I sección A trata sobre cómo crear paralelismo en Snap! gracias a la configuración de un tipo de bloques o el capítulo III te explica cómo crear tus propios bloques definidos.
+
+El entorno de programación de Snap! donde se crean los programas se indica en la figura~\ref{figura:entorno_snapp}. En la sección indicada como A) se encuentran los bloques definidos de 8 categorías para crear los programas, la sección B) es donde se crean los conjuntos de instrucciones arrastrando los bloques y  uniéndolos entre ellos. Por último, la sección C) es donde se puede ver dichas instrucciones ejecutándose y siendo aplicadas a los personajes que definimos.
+\begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.35]{img/entorno.png}
+        \caption{Entorno para programar en Snap!}
+        \label{figura:entorno_snapp}
+\end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % OBJETIVOS %
@@ -435,7 +341,79 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 
 En este apartado se explicará de forma breve y concisa los lenguajes de programación, bases de datos, modelos, arquitecturas y demás tecnologías que se hayan necesitado para la implementación de nuestra aplicación web.
 
+\section{Snap! Berkeley}
+Para entender el funcionamiento de Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
+\begin{itemize}
+    
+    \item Block: existen diferentes clasificaciones. \begin{enumerate}[1)]
+        \item Según las categorías:
+   
+            \begin{enumerate}[a)]
+                \item Motion: bloques que permiten dar movimiento al sprite o personaje.
+                \item Looks: permite cambiar las propiedades de apariencia del personaje.
+                \item Sound: permite añadir sonidos, cambiar el volumen...
+                \item Pen: permite pintar líneas o crear estampas del sprite.
+                \\
+                    \begin{figure}[h]
+                        \centering
+                        \includegraphics[scale=0.45]{img/4-blocks.png}
+                        \caption{Bloques de tipo motion, look sound y pen respectivamente.}
+                        \label{figura:bloque1}
+                    \end{figure}
+                \item Control: bloques para inicializar los scripts o para hacer bucles.
+                \item Sensing: permite distinguir interacciones como cuando pulsas una tecla o cuando tocas un borde con el ratón.
+                \item Operators: permite hacer operaciones como sumas, multiplicaciones,operaciones lógicas...
+                \item Variables: incluye listas, operaciones con listas, inicialización de variables...
+                \begin{figure}[h]
+                        \centering
+                        \includegraphics[scale=0.5]{img/blo4-2.png}
+                        \caption{Bloques de tipo motion, lookm sound y pen respectivamente.}
+                        \label{figura:bloque2}
+                \end{figure}
+                 \end{enumerate}
+        \item Según su funcionalidad:
+            \begin{enumerate}[a)]
+             \item Command block: se corresponden con bloques que tienen acciones ya definidas.
+             \item Reporter block: proporciona un valor de entrada que será usada en una acción.
+             \item Predicate: es otro tipo de ``reporter block'' ya que devuelve una entrada de tipo True o False. Tiene sentido usarlos en bucles o condicionales.
+            \end{enumerate}
+        \item Según su forma:
+             \begin{enumerate}[a)]
+             \item Hat block: son los que se usan para inicializar un script y solo se pueden poner al principio.
+             \item Brick shape: de forma simple y de tipo command block.
+             \item C shape: es de tipo command pero admite dentro de él otro script o un único brick shape. Se corresponde con los bucles y los condicionales.
+             \item E shape: compuesto con dos bloques C shape.
+             \item Oval shape: se corresponde con los reporter block. Por ejemplos, las variables son óvalos de color naranja.
+             \item Hex shape: se corresponde con los predicate block.
+             \end{enumerate}
+        En la figura~\ref{figura:shape} tenemos varios ejemplos.
+        
+        \begin{figure}[h]
+                        \centering
+                        \includegraphics[scale=0.55]{img/shapes.PNG}
+                        \caption{Bloques según la forma en Snap!}
+                        \label{figura:shape}
+        \end{figure}
+    \end{enumerate}
 
+
+    \item Script: es una pila o agrupación de bloques que se inicializan con los hat blocks y realizan un conjunto de acciones como en la figura~\ref{figura:script}.
+
+     \begin{figure}[h]
+        \centering
+        \includegraphics[scale=1]{img/script.PNG}
+        \caption{Script en Snap!}
+        \label{figura:script}
+    \end{figure}
+    
+    \item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.2]{img/sprite.png}
+        \caption{Dos sprites en snap!}
+        \label{figura:sprites}
+    \end{figure}
+\end{itemize}
 
 \section{Modelo cliente-servidor} 
 \label{sec:seccion1}
@@ -666,15 +644,33 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
             \caption{Muñeco de Snap! y de Dr. Snap!}
             \label{figura:logos}
         \end{figure}
+        
+    Además del logo y el muñeco, se ha cambiado la imagen principal de Snap! Berkeley añadiendo el lema de \textit{analyze your own project} en vez de \textit{build your own project} y cambiando al muñeco de Dr. Snap!. Se hizo gracias al sistema de capas que permite borrar zonas y añadir nuevas y se puede ver en la imagen~\ref{figura:snap}.
+    
+    \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.35]{img/snap.PNG}
+            \caption{Imagen principal aplicación web Dr. Snap!}
+            \label{figura:snap}
+        \end{figure}
+        
+     Por último, para expresar los niveles de cada proyecto se me ocurrió poner al muñeco con un bocadillo de texto diciendo el nivel del proyecto. Los 4 niveles se observan en la figura~\ref{figura:levels}.
+     
+    \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.8]{img/levels.PNG}
+            \caption{Imagen que dice el nivel de un proyecto.}
+            \label{figura:levels}
+        \end{figure}
     
     
     \item \textbf{JAVASCRIPT}:
     
-    Se ha usado JavaScript para implementar un conjunto de dashboards. Un dashboard es un gráfico que muestra datos en forma de gráficos (diagrama de barras, de línea o donuts, por ejemplo) y con ello ver un resumen de los datos para poder estudiarlos y analizar posibles tendencias. En esta aplicación se han desarrollado tres de ellos gracias a javascript y a su librería de código abierto Chart.js que admite 8 tipos de gráficos y es responsive. De los tipos que proporciona hemos seleccionado el gráfico de barras y el gráfico de donut. Esta librería, además de implementar dichos gráficos, permite la configuración y la interacción con ellos. Por ejemplo, se puede cambiar los colores de los gráficos, poner nombres a cada eje, añadir animaciones o gestionar todo tipo de eventos. Por ejemplo en la figura~\ref{figura:js} se observa un gráfico circular.
+       Se ha usado JavaScript para implementar un conjunto de dashboards. Un dashboard es un gráfico que muestra datos en forma de gráficos (diagrama de barras, de línea o donuts, por ejemplo) y con ello ver un resumen de los datos para poder estudiarlos y analizar posibles tendencias . En esta aplicación se han desarrollado tres de ellos gracias a javascript y a su librería de código abierto Chart.js que admite 8 tipos de gráficos (de línea, de barra, de donut, circular, burbuja, radar, polar y de dispersión) y es responsive, adapta su diseño para la mejor visualización posible según el dispositivo desde el que se vea. De los tipos que proporciona hemos seleccionado el gráfico de barras y el gráfico de donut. Esta librería, además de implementar dichos gráficos, permite la configuración y la interacción con ellos. Por ejemplo, se puede cambiar los colores de los gráficos, poner nombres a cada eje, añadir animaciones o gestionar todo tipo de eventos. En la figura~\ref{figura:js} se observa un gráfico circular y un gráfico de líneas. 
     \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.25]{img/pie.PNG}
-            \caption{Gráfico circular de Chart.js}
+            \includegraphics[scale=0.5]{img/chart.PNG}
+            \caption{Gráfico circular y de líneas respectivamente de Chart.js}
             \label{figura:js}
         \end{figure}
     
@@ -851,9 +847,9 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
             \label{figura:zip}
     \end{figure}
 \subsection{Dashboard}
-    Los 3 dashboard que tenemos son los que enseñamos en la figura~\ref{figura:dshboard2} y otro más donde se compara los resultados de dos ZIPs que se hayan subido a la aplicación (figura~\ref{figura:dshboard2}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
+       Los 3 dashboard que tenemos son los que enseñamos en la figura~\ref{figura:dshboard2} y otro más donde se compara los resultados de dos ZIPs que se hayan subido a la aplicación (figura~\ref{figura:dshboard}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
     \begin{itemize}
-        \item Estudiante: sólo están disponibles los gráficos de la figura~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno a analizado en Dr. Snap! en un diagrama de barras y en donut.\\
+        \item Estudiante: sólo están disponibles los gráficos de la figura ~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno a analizado en Dr. Snap! en un diagrama de barras y en donut.\\
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{img/dashboard.PNG}
@@ -869,8 +865,7 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
         \end{figure}
        
     \end{itemize}
-    Para implementarlos hemos tenido que añadir un elemento ``canvas'' de HTML que básicamente es un contenedor donde se dibujan los gráficos gracias a la librería de JavaScript ya mencionada ``Chart.js''. Una vez que dichos gráficos estaban implementados, se ha añadido la funcionalidad de que si haces click en una de las barras, por ejemplo en la azul de basic, te redirija a una tabla donde aparecen todos los proyectos de nivel básico. Esto ha requerido el aprendizaje de la programación basada en eventos ya que hacer click en la pantalla es un evento llamado onClick y hay que manejarlo para que distinga si estás pinchando dentro del elemento \textit{canvas}, si es fuera de las barras o porciones del donut y en caso de que sea dentro de ellas, distinguir qué nivel está pinchando.
-
+    Para implementarlos hemos tenido que añadir un elemento ``canvas''~ de HTML que básicamente es un contenedor donde se dibujan los gráficos gracias a la librería de JavaScript ya mencionada ``Chart.js''. Una vez que dichos gráficos estaban implementados, se ha añadido la funcionalidad de que si haces click en una de las barras, por ejemplo en la azul de basic, te redirija a una tabla donde aparecen todos los proyectos de nivel básico. Esto ha requerido el aprendizaje de la programación basada en eventos ya que hacer click en la pantalla es un evento llamado onClick y hay que manejarlo para que distinga si estás pinchando dentro del elemento \textit{canvas}, si es fuera de las barras o porciones del donut y en caso de que sea dentro de ellas, distinguir qué nivel está pinchando.
 
 
 
