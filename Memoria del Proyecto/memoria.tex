@@ -774,20 +774,21 @@ En la figura~\ref{figura:xml} se ven los pasos necesarios para conseguir los dat
             \label{figura:xml}
     \end{figure}
         
- Una vez que tenemos el XML tenemos que parsearlo para poder obtener todos los datos necesarios y, para ello, hemos hecho uso de la API xml.sax. Un archivo XML es un texto compuesto de etiquetas creado para formar una estructura de datos e información. Gracias al ContentHandler y al parser de xml.sax podemos acceder a cada etiqueta y a su contenido. Para ello, la clase ContentHandler define 3 funciones muy importantes:
+  Una vez que tenemos el XML tenemos que parsearlo para poder obtener todos los datos necesarios y, para ello, hemos hecho uso de la API xml.sax. Un archivo XML es un texto compuesto de etiquetas creado para formar una estructura de datos e información. Gracias al \textit{ContentHandler} y al \textit{parser} de xml.sax podemos acceder a cada etiqueta y a su contenido. Para ello, la clase \textit{ContentHandler} define 3 funciones muy importantes:
  \begin{itemize}
-     \item  def \_\_init\_\_ (self) en la que se deben inicializar todas las variables.
-     \item def startElement (self, name, attrs) es la función que encuentra inicios de etiqueta XML, donde name se convierte en el nombre de la etiqueta y attrs en los atributos que hay en la etiqueta. Por ejemplo, block s=``move'' el nombre de la etiqueta es block, el atributo es s y su valor es move. En este punto guardaremos en un diccionario JSON los atributos y valores correspondientes  según necesitemos. Se ha tomado la decisión de trabajar con JSON porque es mucho más sencillo y rápido.
-     \item def endElement(self, name) es la función que se encuentra con el cierre de etiquetas XML y sirve para saber que ya  has avanzado a otra etiqueta.
+     \item  \textit{def \_\_init\_\_ (self)} en la que se deben inicializar todas las variables.
+     \item \textit{def startElement (self, name, attrs)} es la función que encuentra inicios de etiqueta XML, donde name se convierte en el nombre de la etiqueta y attrs en los atributos que hay en la etiqueta. Por ejemplo, block s=``move'' el nombre de la etiqueta es block, el atributo es s y su valor es move. En este punto guardaremos en un archivo JSON los atributos y valores correspondientes  según necesitemos. Se ha tomado la decisión de trabajar con JSON porque es mucho más sencillo y rápido.
+     \item \textit{def endElement(self, name)} es la función que se encuentra con el cierre de etiquetas XML y sirve para saber que ya  has avanzado a otra etiqueta.
 
  \end{itemize}
  Para analizar un documento XML tenemos que:
  \begin{itemize}
-     \item Crear un lector de XML con make\_parser().
-     \item  Crear un manejador de contenido del XML con myContentHandler().
-     \item Definir las funciones del ContentHandler y añadírselas al parser con setContentHandler(theHandler).
+     \item Crear un lector de XML con \textit{make\_parser()}.
+     \item  Crear un manejador de contenido del XML con \textit{myContentHandler()}.
+     \item Definir las funciones del \textit{ContentHandler} y añadírselas al \textit{parser} con \textit{setContentHandler(theHandler)}.
      \item Parsear la url donde se encuentra el archivo XML con el parser ya definido.
  \end{itemize}
+ 
 Este paso puede que haya sido el más complicado de todos pues los proyectos de Snap! tienen una estructura XML más o menos similar pero no llega a ser única por lo que al intentar analizar las etiquetas resultó difícil porque no todos los proyectos encajaban con lo que había definido. En la figura~\ref{figura:tree} se refleja el esquema de etiquetas que se ha supuesto y cómo lo hemos guardado. Con esta estructura pretendemos poder guardar en un JSON solamente  los sprites que hay, los scripts y los bloques que se utilizan. Como extra se han guardado las variables y los bloques que puede crear un usuario. \\
 El JSON se compone de 4 listas (sprites, variables, block-definition y name block-definition) que contienen diccionarios con sus datos. Por ejemplo, en sprites se guardan diccionarios por cada bloque parseado con los campos nº sprite, nº script, block y nº block.
 \\
@@ -798,8 +799,8 @@ El JSON se compone de 4 listas (sprites, variables, block-definition y name bloc
             \label{figura:tree}
     \end{figure}
     
-Una vez que los datos se han guardado en el JSON, se procedió a implementar la rúbrica en Django con 7 categorías: paralelismo, abstracción, datos, flujo de control, diversidad o categorías, condicionales, sincronización e interactividad. Los criterios de evaluación quedan reflejados en la tabla y tienen de base la  de Dr. Scratch. Cada categoría tendrá, por tanto, una puntuación  Nula (0), Básica (1), Intermedia (2) o Avanzada (3), y para la puntuación global, se hará la media de las 8 categorías resultando una puntuación de: nivel nulo de 0 a 0.5, básico de 0.5 a 1.5, intermedio de 1.5 a 2.5 y avanzado de 2.5 a 3. Si el usuario ha iniciado sesión toda esta información se guarda en la base de datos en la tabla proyecto ya mencionada.
-\begin{table}[h]
+Una vez que los datos se han guardado en el JSON, se procedió a implementar la rúbrica en Django con 8 categorías: paralelismo, abstracción, datos, flujo de control, diversidad o categorías, condicionales, sincronización e interactividad. Los criterios de evaluación quedan reflejados en la tabla~\ref{tabla:rubrica} y tiene de base la  de Dr. Scratch. Cada categoría tendrá, por tanto, una puntuación  Nula (0), Básica (1), Intermedia (2) o Avanzada (3), y para la puntuación global, se hará la media de las 8 categorías resultando una puntuación de: nivel nulo de 0 a 0.5, básico de 0.5 a 1.5, intermedio de 1.5 a 2.5 y avanzado de 2.5 a 3. Si el usuario ha iniciado sesión toda esta información se guarda en la base de datos en la tabla \textit{proyecto} ya mencionada.
+
 \centering
 \begin{tabular}{l|l|l|l|}
 \cline{2-4}
@@ -817,7 +818,7 @@ Una vez que los datos se han guardado en el JSON, se procedió a implementar la 
 \label{tabla:rubrica}
 \end{table}
 \subsection{Usuarios}
-Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta y así poder guardar todos los proyectos analizados en la base de datos. Para ello, se implementó en primer lugar la opción de iniciar y cerrar sesión gracias a las funciones de login y logout que ofrece Django en su sistema de autenticación (django.contrib.auth.models). Este sistema permite distinguir cuando un usuario está autenticado y cuando no, pudiendo hacer funciones exclusivamente para usuarios como es el caso del recurso /projects que muestra los proyectos que el usuario ha analizado previamente. Sin embargo, para crear usuarios se tenía que gestionar desde el recurso /admin y solo lo podía hacer el superusuario, por lo que se añadió la opción de hacerse una cuenta. Se puede importar un formulario para crear usuario que ya viene predefinido (pero de aspecto modificable) en django.contrib.auth.models y con él, un usuario se registra y solo faltaría que en la función de signup autenticásemos ese usuario y lo iniciásemos sesión directamente. En la figura~\ref{figura:sign} se observa la página de iniciar sesión y la de hacerse una cuenta. Cabe destacar que se implementó que si el usuario estaba logueado apareciese un recuadro arriba de todas las  páginas con la opción de cerrar sesión.
+Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta y así poder guardar todos los proyectos analizados en la base de datos. Para ello, se implementó en primer lugar la opción de iniciar y cerrar sesión gracias a las funciones de \textit{login} y \textit{logout} que ofrece Django en su sistema de autenticación (\textit{django.contrib.auth.models}). Este sistema permite distinguir cuando un usuario está autenticado y cuando no, pudiendo hacer funciones exclusivamente para usuarios como es el caso del recurso \textit{/projects} que muestra los proyectos que el usuario ha analizado previamente. Sin embargo, para crear usuarios se tenía que gestionar desde el recurso /admin y solo lo podía hacer el superusuario, por lo que se añadió la opción de hacerse una cuenta. Se puede importar un formulario para crear un usuario que ya viene predefinido (pero de aspecto modificable) en \textit{django.contrib.auth.models} y a partir de él, un usuario se registra y solo faltaría que en la función de \textit{signup} autenticásemos ese usuario y lo iniciásemos sesión directamente. En la figura~\ref{figura:sign} se observa la página de iniciar sesión y la de hacerse una cuenta. Cabe destacar que se implementó que si el usuario estaba logueado apareciese un recuadro arriba de todas las  páginas con la opción de cerrar sesión. Los usuarios con sus contraseñas quedan guardados en la tabla de la base de datos denominada \textit{auth\_user}.
 
 \begin{figure}[h]
 \centering
