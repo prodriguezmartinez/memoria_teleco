@@ -339,13 +339,34 @@ Lo importante es que quede claro cuánto tiempo llevas (tiempo natural, p.ej., 6
 \chapter{Estado del arte}
 \label{chap:estado}
 
-En este apartado se explicará de forma breve y concisa los lenguajes de programación, bases de datos, modelos, arquitecturas y demás tecnologías que se hayan necesitado para la implementación de nuestra aplicación web.
+En este apartado se explicará de forma breve y concisa los lenguajes de programación, bases de datos, modelos, arquitecturas y demás tecnologías que se hayan necesitado para la implementación de nuestra aplicación web. Haremos una clara distinción entre los conceptos básicos que se han necesitado adquirir y las tecnologías usadas para que nuestra aplicación ofrezca las prestaciones prometidas y tenga un buen diseño web.
 
 \section{Snap! Berkeley}
-Para entender el funcionamiento de Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
+Como hemos mencionado previamente, la aplicación web será un analizador de proyectos creados desde Snap! Berkeley. Cabe destacar que el funcionamiento de Snap! como lenguaje resulta ser muy potente pudiendo crear programas complejos y elaborados. Para entender el funcionamiento de la programación en Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
+
 \begin{itemize}
+
+	\item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro 		programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos 	dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de 	movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. Esto es muy útil 	sobretodo para crear animaciones, historias o juegos interactivos con personajes. Los sprites tienen una apariencia que puede cambiarse gracias a los ``customes''
+    que se pueden pintar como los dos del ejemplo  anterior o se pueden importar.
     
-    \item Block: existen diferentes clasificaciones. \begin{enumerate}[1)]
+	    \begin{figure}[h]
+		\centering
+		\includegraphics[scale=0.3]{img/sprite.png}
+		\caption{Dos sprites en snap!}
+		\label{figura:sprites}
+	    \end{figure}
+	\item Script: es una pila o agrupación de bloques que se inicializan con los llamados 	\textit{hat blocks} y realizan un conjunto de acciones como en la 		figura~\ref{figura:script}. 
+    
+     \begin{figure}[h]
+        \centering
+        \includegraphics[scale=1]{img/script.PNG}
+        \caption{Script en Snap!}
+        \label{figura:script}
+    \end{figure}    
+	    
+     \item Block: son los elementos básicos del lenguaje de Snap!. Se deben arrastrar a la zona de \textit{scripting} para encajarlos y crear scripts que hagan funciones. Existen diferentes clasificaciones:
+     
+     \begin{enumerate}[1)]
         \item Según las categorías:
    
             \begin{enumerate}[a)]
@@ -395,24 +416,7 @@ Para entender el funcionamiento de Snap! es necesario definir algunos conceptos 
                         \label{figura:shape}
         \end{figure}
     \end{enumerate}
-
-
-    \item Script: es una pila o agrupación de bloques que se inicializan con los hat blocks y realizan un conjunto de acciones como en la figura~\ref{figura:script}.
-
-     \begin{figure}[h]
-        \centering
-        \includegraphics[scale=1]{img/script.PNG}
-        \caption{Script en Snap!}
-        \label{figura:script}
-    \end{figure}
     
-    \item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de movimiento, sonidos, es decir, cada sprite tiene sus propios scripts. 
-    \begin{figure}[h]
-        \centering
-        \includegraphics[scale=0.2]{img/sprite.png}
-        \caption{Dos sprites en snap!}
-        \label{figura:sprites}
-    \end{figure}
 \end{itemize}
 
 \section{Modelo cliente-servidor} 
@@ -470,12 +474,13 @@ La arquitectura MVC divide las partes de una aplicación en modelo, vista y cont
 
 \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.4]{img/django_request.png}
+        \includegraphics[scale=0.5]{img/django_request.png}
         \caption{Arquitectura MVC en Django}
         \label{figura:MVC}
 \end{figure}
 \section{Representational state transfer}
 REST es un modelo de diseño de servicio web que define un conjunto de principios de una arquitectura basada en recursos apto únicamente para aplicaciones distribuidas. Supone una mejora en la facilitación en el intercambio  de  datos  entre  el  cliente  y  el  servidor  que, por ejemplo, el protocolo simple de acceso a objetos (SOAP).  Sus principios son:
+
 \begin{enumerate}[a)] % (a), (b), (c), ...
 \item Modelo cliente (capa de presentación) - servidor (capa de negocio y datos) sin estado. No es necesario recordar ningún dato ya que las peticiones HTTP que se generan llevan incluidas todas las cabeceras y datos necesarios para dar una respuesta sin depender del estado anterior.
 \item Estructura URI para los recursos.
@@ -497,7 +502,8 @@ Para la interfaz de usuario o la capa de presentación hemos utilizado en nuestr
         \label{figura:frontend}
 \end{figure}
 \subsection{HTML}
-HyperText Markup Language, en español lenguaje marcado de hipervínculos, es el lenguaje básico de construcción de páginas web. Se basa en texto que contiene referencias a enlaces, imágenes, tablas, textos u otros elementos. Un elemento HTML debe ir entre etiquetas que definen la orden o instrucción de lo que se quiere insertar~\cite{equipo2009diseno}.Por ejemplo, para insertar un título se podría usar la etiqueta h1 o para insertar una imagen img. HTML se encarga de crear el contenido de la página web pero no del estilo o apariencia de dicha página, para ello es necesario el CSS. 
+\subsection{HTML}
+HyperText Markup Language, en español lenguaje marcado de hipervínculos, es el lenguaje básico de construcción de páginas web. Se basa en texto que contiene referencias a enlaces, imágenes, tablas, textos u otros elementos. Un elemento HTML debe ir entre etiquetas que definen la orden o instrucción de lo que se quiere insertar~\cite{equipo2009diseno}. Por ejemplo, para insertar un título se podría usar la etiqueta \textit{h1} o para insertar una imagen \textit{img}. HTML se encarga de crear el contenido de la página web pero no del estilo o apariencia de dicha página, para ello es necesario el CSS. Es decir, si nosotros queremos insertar un formulario para rellenar datos en nuestra página web va a ser necesario definir en HTML los elementos del formulario como son sus atributos (action y method), los campos que queremos que el usuario rellene con sus datos y un botón para darle a enviar. Ahora, para que el formulario tenga una apariencia en concreto tendremos que usar CSS para dar estilo a los elementos HTML del formulario.
 
 \begin{figure}[h]
         \centering
@@ -505,6 +511,7 @@ HyperText Markup Language, en español lenguaje marcado de hipervínculos, es el
         \caption{Etiquetas en HTML}
         \label{figura:tags}
 \end{figure}
+
 \subsection{CSS}
 Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje de estilos que permite modificar la apariencia de páginas webs construidas en HTML. La sintaxis de una instrucción CSS es una declaración que tiene una propiedad y un valor~\cite{mdn}. La propiedad es la característica de estilo que se quiere cambiar, por ejemplo si queremos cambiar el fondo la propiedad sería ``background'', y el valor sería el color o imagen del fondo que se querría cambiar. Se agrupan las declaraciones referidas a un elemento concreto de HTML, denominado selector, en un bloque. En la figura~\ref{figura:css} se muestra un ejemplo de CSS dando estilo a un código HTML.
 
@@ -514,6 +521,7 @@ Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje d
         \caption{CSS asociado al HTML}
         \label{figura:css}
 \end{figure}
+
 \subsection{JavaScript}
 Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JS en HTML se debe indicar con la etiqueta script.  Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ´´event handler''~\cite{perez2019introduccion}.
 
@@ -539,7 +547,7 @@ Es un framework de alto nivel que permite crear una aplicación web usando pytho
 \begin{itemize}
     \item Tiene un mapeador objeto relacional (ORM) que es una librería que reconoce y relaciona cómo es la base de datos o el código que tú escribas.
     \item Conjunto de librerías HTTP que gestionan las peticiones y respuestas.
-    \item Libería de ruta de urls para localizar el código que corresponde a la URL introducida. 
+    \item Librería de ruta de urls para localizar el código que corresponde a la URL introducida. 
     \item Sistema de plantillas que conforman la interfaz del usuario.
     \item Basado en el patrón MVC con la variación de que las vistas delegan la presentación al sistema de plantillas.
     \item Por defecto la base de datos es sqlite3 pero se puede usar otras como MySql, PostgreSQL u Oracle configurándolo en el módulo settings.py.
