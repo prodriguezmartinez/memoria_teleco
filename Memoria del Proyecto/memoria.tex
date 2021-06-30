@@ -886,10 +886,34 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
 \cleardoublepage
 \chapter{Experimentos y validación}
 
-Este capítulo se introdujo como requisito en 2019. 
-Describe los experimentos y casos de test que tuviste que implementar para validar tus resultados. 
-Incluye también los resultados de validación que permiten afirmar que tus resultados son correctos. 
 
+Para validar y testear la aplicación web hemos distinguido diferentes fases o puntos a lo largo que ha ido avanzando el proyecto. En orden cronológicos tenemos las siguientes validaciones:
+\section{Parseo del XML}
+Para ello se tuvieron que analizar más de 50 proyectos, algunos creados por mí y otros cogidos de proyectos subidos a Snap! Berkeley. Con esto se pretendía deducir la estructura más común y global que presentaban la mayoría de los proyectos en formato XML. Por ejemplo, en la figura~\ref{figura:xml-1} se muestra el fichero XML que se obtiene al añadir simplemente el bloque \textit{move} en un script. En primera instancia se supuso que los XML tendrían las etiquetas project, stage, sprites, sprite, scripts, script y block ya que en en stage están todos los sprites, en cada sprite están los scripts y en cada script están los bloques utilizados. Sin embargo, esta aproximación era errónea ya que al agregar nuevos bloques el XML añadía nuevas etiquetas que provocaban continuos errores de lectura. Algunos puntos a tener en cuenta son:
+\begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{img/xml_val.PNG}
+            \caption{Primera aproximación estructura XML}
+            \label{figura:xml-1}
+        \end{figure}
+        
+
+\begin{itemize}
+    \item Se debe distinguir la etiqueta \textit{block} con dos atributos muy importantes: \textit{s} que hace referencia a todos los bloques ya definidos por Snap! Berkeley y \textit{custom} que hace referencia a los creados por los usuarios. 
+    \item Se debe tener en cuenta que los bloques definidos pueden aparecer tanto a la altura de block (con el atributo \textit{custom}) como a la altura de los sprites (con la etiqueta \textit{block-definition}).
+    \item Las variables se pueden tratar de igual manera que el punto anterior.
+    \item Un bloque ya predefinido por Snap! tiene la etiqueta block y el atributo \textit{s}. Sin embargo, hay algunos bloques que pueden tener scripts dentro como observamos en la figura~\ref{figura:script-block}. Esto debe tenerse en cuenta a la hora de abrir o cerrar las etiquetas scripts ya que puede hacerse de forma errónea.
+    \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.5]{img/block-script.PNG}
+            \caption{Script dentro de un bloque}
+            \label{figura:script-block}
+        \end{figure}
+\end{itemize}
+ La estructura final se mostró anteriormente en la figura~\ref{figura:tree} junto con el JSON donde se guardaron los datos de interés a la vez que se parseaba el XML.
+ 
+ \section{Implementación rúbrica en Django}
+ 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
