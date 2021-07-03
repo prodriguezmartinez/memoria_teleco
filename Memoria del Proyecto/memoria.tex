@@ -910,11 +910,78 @@ Para ello se tuvieron que analizar más de 50 proyectos, algunos creados por mí
             \label{figura:script-block}
         \end{figure}
 \end{itemize}
- La estructura final se mostró anteriormente en la figura~\ref{figura:tree} junto con el JSON donde se guardaron los datos de interés a la vez que se parseaba el XML.
+La estructura final se mostró anteriormente en la figura~\ref{figura:tree} junto con el JSON donde se guardaron los datos de interés a la vez que se parseaba el XML. En la figura~\ref{figura:JSON} se muestra el archivo JSON que se guarda tras analizar el proyecto de la figura~\ref{figura:script-block} y podemos observar que en la lista sprites tenemos dos diccionarios: uno para el bloque ``repeat'' y otro para el bloque ``move''. Destacamos que ambos bloques pertenecen al sprite 1 y al script 1 como se indica en los valores de cada diccionario y como extra guardamos el número de cada bloque por saber el máximo de bloques que se usan en el proyecto. Al no tener variables ni bloques definidos, ambas listas están vacías.
+ \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.55]{img/json.PNG}
+            \caption{JSON que guarda los datos de un XML.}
+            \label{figura:JSON}
+        \end{figure}
  
  \section{Implementación rúbrica en Django}
- 
+ Para la implementación de la rúbrica se han definido 3 funciones auxiliares que dan información sobre  los datos del JSON guardado y 8 funciones principales que calculan la puntuación de cada sección. Las 3 funciones auxiliares son: calcular el número total de scripts, calcular el número total de sprites y ver si hay más de dos bloques en un script. Para validar esto usaremos un ejemplo fácil pero con mayor contenido como el de la figura~\ref{figura:snap-ej} que consta de 1 sprite, 2 scripts y 7 bloques.
+    \begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.6]{img/ej_rubrica.PNG}
+            \caption{Ejemplo de Snap!}
+            \label{figura:snap-ej}
+        \end{figure}
+        
+    Las puntuaciones que deberían aparecer basándonos en la tabla~\ref{tabla:rubrica} son:
+    \begin{itemize}
+        \item Paralelismo: 1 sprite, 2 scripts y uso de bandera verde supone estar en la puntuación básica (1).
+        \item Condicionales: no se usa ningún bloque condicional ni operadores lógicos por lo que la puntuación es nula (0).
+        \item Control de flujo: el primer script tiene 3 bloques y el segundo 2 lo que supone una puntuación básica. Sin embargo, el uso del bloque ``forever'' asciende la puntuación a intermedia (2).
+        \item Abstracción: el tener 1 sprite, 2 scripts y ningún bloque definido supone una puntuación básica (1).
+        \item Sincronización: en este ejemplo no hay ningún tipo de sincronización por lo que la puntuación debería resultar nula (0).
+        \item Interactividad: la única interacción que observamos es la bandera verde por lo que tenemos una puntuación básica (1).
+        \item Categorías o diversidad: tenemos en total 4 categorías diferentes por lo que la puntuación sería intermedia (2).
+        \item Representación de datos: no se han definido ni variables ni listas pero usamos los atributos de posición ``move'' y ``turn'' por lo que la puntuación será básica (1).
+    \end{itemize}
+En la figura~\ref{figura:analisis-ej} confirmamos que las puntuaciones esperadas son las correctas y validamos por tanto la implementación de la rúbrica.
+\begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.37]{img/validacion-ej.PNG}
+            \caption{Ejemplos análisis de un proyecto.}
+            \label{figura:analisis-ej}
+        \end{figure}
+        
+\section{Iniciar sesión y registrarse}
 
+Como ya hemos mencionado, para registrarse es necesario elegir el tipo de usuario (profesor o estudiante) y rellenar un formulario con los campos: nombre de usuario y contraseña. Crearemos un usuario que sea de tipo profesor, se llame \textit{maria21} y su contraseña sea \textit{telecomunicaciones2021}. En la figura~\ref{figura:validacion-user} se puede observar como el usuario ha quedado bien registrado en la base de datos.
+\begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.37]{img/validacion-user.png}
+            \caption{Base de datos con las tablas \textit{user} y \textit{tipo}.}
+             \label{figura:validacion-user}
+        \end{figure}
+
+\section{Proyectos en la base de datos}
+
+Al analizar un proyecto de un usuario registrado se debe guardar el usuario, las puntuaciones del proyecto y su nivel asociado, el nombre del proyecto, la URL de nuestra aplicación web, la URL de Snap! y si es zip o no. Desde el usuario de \textit{maria21} vamos analizar el proyecto de la figura~\ref{figura:snap-ej} y podemos ver en la figura~\ref{figura:validacion-bbdd} que se ha guardado todos los datos de forma correcta en la base de datos. Con esta tabla seremos capaces de acceder cuando queramos a las puntuaciones del proyecto gracias al recurso \textit{/project/\<name\_project>} que accede a esta base de datos filtrando por usuario y nombre del proyecto.
+\begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.37]{img/maria21.png}
+            \caption{Proyecto guardado en la base de datos.}
+             \label{figura:validacion-bbdd}
+        \end{figure}
+        
+\section{ZIPs en la base de datos}
+De igual forma que en la sección anterior, vamos a comprobar que al analizar un ZIP los datos quedan correctamente guardados en la base de datos. El ZIP denominado \textit{validacion.zip} usado de ejemplo  consta de 3 proyectos sacados de Snap! Berkeley llamados: \textit{Dogde.xml},     \textit{ S2E1 - Human body scanner.xml} y \textit{Sierpinski carpet.xml}. En la figura~\ref{figura:bbdd-zip} podemos ver como se han añadido los 3 proyectos nuevos pertenecientes a \textit{validacion.zip} a la base de datos que teníamos en la figura~\ref{figura:validacion-bbdd}.
+\begin{figure}[h]
+            \centering
+            \includegraphics[scale=0.37]{img/bbdd-zip.png}
+            \caption{ZIP guardado en la base de datos.}
+             \label{figura:bbdd-zip}
+        \end{figure}
+\section{ZIP exportado como CSV}
+Usando el ZIP anterior si le damos a descargar como CSV en nuestra aplicación web observamos en la figura~\ref{figura:csv} que se exportan los datos de forma correcta. Simplemente se muestra el nombre del ZIP, el nombre del proyecto, el nivel del proyecto global y las puntuaciones de cada categoría. Esta funcionalidad se añadió como una ayuda a los profesores.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/csv.png}
+            \caption{CSV correspondiente al ejemplo \textit{validacion.zip}.}
+             \label{figura:csv}
+        \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % RESULTADOS %
@@ -923,9 +990,69 @@ Para ello se tuvieron que analizar más de 50 proyectos, algunos creados por mí
 \cleardoublepage
 \chapter{Resultados}
 
-En este capítulo se incluyen los resultados de tu trabajo fin de grado.
+Para ver los resultados de nuestra aplicación web haremos una distinción entre el modo profesor y el modo estudiante ya que cada uno tiene diferentes posibles respuestas.
+\section{Modo estudiante}
+Crearemos un usuario llamado \textit{pablo21} de tipo estudiante y vamos a analizar nuestro primer proyecto llamado \textit{Benham}  sacado de la URL \url{https://cloud.snap.berkeley.edu/project?user=kinestheticlearning&project=Benham}. En la figura~\ref{figura:Benham} se muestra el resultado de analizar dicho proyecto.
 
-Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejemplos de haberla utilizado para que se vea su utilidad.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.25]{img/ej-estudiante.png}
+            \caption{Página resultante de analizar el proyecto \textit{Benham}.}
+             \label{figura:Benham}
+        \end{figure}
+
+Ahora si analizamos varios proyectos más con el mismo usuario tenemos la opción de ver una tabla donde se muestran todos los proyectos analizados con sus respectivas puntuaciones gracias al recurso \textit{/projects}.  Esto se refleja en la figura~\ref{figura:project-es} y cabe mencionar que la fila de \textit{proyecto} son enlaces que te llevan a los resultados individuales del análisis de cada uno.
+
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.3]{img/projects-estudiante.png}
+            \caption{Página que muestra todos los proyectos analizados por el usuario.}
+             \label{figura:project-es}
+        \end{figure}
+        
+Otra funcionalidad es que el estudiante tiene la opción de ver dos dashboard con los proyectos analizados como en la figura~\ref{figura:dash-es}. En ellos se puede ver que hay 3 proyectos de nivel intermedio y uno de nivel avanzado.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.3]{img/dashboard-es.png}
+            \caption{Página que muestra los dashboard de los proyectos.}
+             \label{figura:dash-es}
+        \end{figure}
+        
+Por último, si hacemos \textit{click} en la barra amarilla de valor intermedia, s nos va a redirigir a una página que implementa la tabla de proyectos vista en la figura~\ref{figura:project-es} pero solamente mostrando los proyectos de nivel intermedio. Esta funcionalidad es útil para cuando un estudiante quiera ver solamente los proyectos de un único nivel.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.3]{img/intermediate-es.png}
+            \caption{Página que muestra los proyectos del nivel cuando haces \textit{click} en el dashboard.}
+             \label{figura:click-es}
+        \end{figure}
+        
+\section{Modo profesor}
+Aparte de tener las mismas funcionalidades que se ofrecen en el modo estudiante veremos los resultados de analizar un ZIP denominado \textit{modo-profesor.zip} que guarda los mismos proyectos que ha analizado el estudiante \textit{pablo21} para así ver que los resultados son los mismos. En la figura~\ref{figura:zip-pr} observamos los resultados de analizar el ZIP y vemos que son los mismos que cuando los proyectos se analizaron por separado. 
+
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.35]{img/resultado-zip.png}
+            \caption{Página que muestra los proyectos analizados de un ZIP.}
+             \label{figura:zip-pr}
+        \end{figure}
+
+Por último, podemos ver los dashboard de los proyectos analizados como los estudiantes pero si queremos ver el de algunos de los ZIPs analizados o comparar dos de ellos tendremos que rellenar los formularios de la figura~\ref{figura:form-pr}.
+
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.4]{img/form-zip.png}
+            \caption{Formularios para obtener los dashboard correspondientes.}
+             \label{figura:form-pr}
+        \end{figure}
+        
+El resultado de obtener el dashboard de \textit{modo-profesor.zip} resulta el mismo que en la figura~\ref{figura:dash-es} y el resultado de comparar el archivo \textit{modo-profesor.zip} y el archivo \textit{validaciones.zip} (previamente utilizado) se observa en la figura~\ref{figura:zips-pr}
+
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.35]{img/comparar-ej.png}
+            \caption{Comparación de dos ZIPs}
+             \label{figura:zips-pr}
+        \end{figure}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -940,48 +1067,36 @@ Si es una herramienta de análisis lo que has realizado, aquí puedes poner ejem
 
 \section{Consecución de objetivos}
 \label{sec:consecucion-objetivos}
-
-Esta sección es la sección espejo de las dos primeras del capítulo de objetivos, donde se planteaba el objetivo general y se elaboraban los específicos.
-
-Es aquí donde hay que debatir qué se ha conseguido y qué no. 
-Cuando algo no se ha conseguido, se ha de justificar, en términos de qué problemas se han encontrado y qué medidas se han tomado para mitigar esos problemas.
-
-Y si has llegado hasta aquí, siempre es bueno pasarle el corrector ortográfico, que las erratas quedan fatal en la memoria final.
-Para eso, en Linux tenemos aspell, que se ejecuta de la siguiente manera desde la línea de \emph{shell}:
-
-\begin{verbatim}
-  aspell --lang=es_ES -c memoria.tex
-\end{verbatim}
-
+La aplicación web ha conseguido los objetivos planteados ya que permite ser una herramienta docente tanto para un alumno como para un profesor. Ofrece diversas funcionalidades que pueden llegar a ser muy útiles para el ámbito académico y para la mejora y desarrollo de los conocimientos de programación. Cabe destacar que funciona solamente si las URLs de los proyectos pertenecen al dominio de \url{https://cloud.snap.berkeley.edu/} y no a \url{https://snap.berkeley.edu/} por lo que puede llevar a que te salga un error en la aplicación web. Otro error a mencionar que puede producirse es que el proyecto no cumpla con la estructura de parseo XML que hemos definido y ello haría imposible el análisis de dicho proyecto pero es un caso muy poco común. Por lo demás, la aplicación cumple lo cometido y predefinido en los objetivos.
 \section{Aplicación de lo aprendido}
 \label{sec:aplicacion}
 
-Aquí viene lo que has aprendido durante el Grado/Máster y que has aplicado en el TFG/TFM. Una buena idea es poner las asignaturas más relacionadas y comentar en un párrafo los conocimientos y habilidades puestos en práctica.
+A lo largo de mi carrera he aprendido muchos conocimientos gracias a diversas asignaturas y ello ha hecho posible este trabajo de fin de grado. Estas son:
 
 \begin{enumerate}
-  \item a
-  \item b
+\item Fundamentos de la Programación me permitió aprender a comprender la programación y comenzar a pensar como un ``buen'' programador.
+\item Programación de Sistemas de Telecomunicación me enseñó la implementación del modelo cliente-servidor.
+  \item Servicios y Aplicaciones Telemáticas me ha enseñado el uso de Django y el diseño del \textit{FRONTEND} en aplicaciones webs.
+  \item Desarrollo de aplicaciones telemáticas, aunque nunca llegué a cursarla, con los apuntes de mis compañeros he aprendido el uso de CSS y la mejora en apariencia del diseño web. 
+  \item Ingeniería de Sistemas de Información me ha permitido aplicar los conocimientos de bases de datos que imparte la asignatura.
 \end{enumerate}
-
 
 \section{Lecciones aprendidas}
 \label{sec:lecciones_aprendidas}
-
-Aquí viene lo que has aprendido en el Trabajo Fin de Grado/Máster.
+La realización de este proyecto ha hecho que aumenten mis conocimientos en distintas áreas de telecomunicaciones:
 
 \begin{enumerate}
-  \item Aquí viene uno.
-  \item Aquí viene otro.
+  \item Apariencia  de páginas webs con CSS y las templates de HTML. He aprendido sobre todo a diseñar botones, menús o formularios.
+  \item Mejora en el lenguaje Python y el entorno Django. He desarrollado conocimientos en el manejo de estructuras XML, de diccionarios y listas, de archivos JSON y en la abstracción de procedimientos o funciones demasiado grandes para dividirlas en apartados más pequeños. Además, he ampliado mis conocimientos en los métodos de GET y POST para poder hacer peticiones.
+  \item Probablemente lo que más haya aprendido haya sido el uso de JavaScript puesto que era la primera vez que lo usaba y me ha enseñado sobre todo la programación basada en eventos.
+  \item Pythonanywhere es un servidor gratuito que no sabía que existía y que es muy útil porque admite proyectos de Django ya implementados y es sencillo de utilizar.
 \end{enumerate}
 
 
 \section{Trabajos futuros}
 \label{sec:trabajos_futuros}
 
-Ningún proyecto ni software se termina, así que aquí vienen ideas y funcionalidades que estaría bien tener implementadas en el futuro.
-
-Es un apartado que sirve para dar ideas de cara a futuros TFGs/TFMs.
-
+Un posible proyecto futuro sería la mejora de esta herramienta para que admita todo tipo de proyectos de Snap! independientemente de su estructura XML y que aporte nuevas funcionalidades como alguna de \textit{machine learning} que pueda ver patrones de error repetidos y ayude a los estudiantes a mejorar en su programación evitando dichos patrones.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
