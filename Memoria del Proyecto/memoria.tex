@@ -160,9 +160,9 @@ Además, la pareja quizás no sea para siempre, pero tu madre sí.
 
 En la actualidad, aprender programación aporta al ser humano habilidades como la resolución de problemas, la abstracción de ellos o la depuración de errores. En este mundo tecnológico se ha hecho imprescindible la docencia de asignaturas que introduzcan a los estudiantes en el mundo de los programadores. Snap! Berkeley es una plataforma que ofrece la posibilidad de crear programas de forma visual con bloques que realizan funciones o acciones sin necesidad de aprender un lenguaje de programación. De esta forma se puede introducir la programación y sus conceptos básicos desde edades tempranas haciendo que sea de una forma divertida, interactiva y didáctica.
 
-Este trabajo de fin de grado aspira a ser una herramienta web que analiza los proyectos o programas de Snap! creados por los estudiantes basando el análisis en ocho conceptos del pensamiento computacional. Con ello se pretende que el alumno pueda ver sus puntos fuertes y sus carencias para mejorar y conseguir un nivel mayor de programación. Además, postula ser una ayuda para el profesorado en la corrección de de los proyectos de un aula entera.
+Este trabajo de fin de grado aspira a crear una herramienta web que analiza los proyectos o programas de Snap! creados por los estudiantes basando el análisis en ocho conceptos de pensamiento computacional. Con ello se pretende que el alumno pueda ver sus puntos fuertes y sus carencias para mejorar y conseguir un nivel mayor de programación. Además, la herramienta se postula a ser una ayuda para el profesorado en la corrección de los proyectos de un aula entera.
 
-La aplicación web se llamará Dr. Snap! y surge de la idea del famoso analizador Dr. Scratch que analiza los proyectos de la plataforma Scratch. Para este trabajo se utilizarán tecnologías como el entorno Django, el lenguaje Python, las plantillas de HTML o el servidor que ofrece \url{https://www.pythonanywhere.com/}.
+La aplicación web se llama Dr. Snap! y surge de la idea del famoso analizador Dr. Scratch que analiza los proyectos de la plataforma Scratch. Para este trabajo se utilizarán tecnologías como el entorno Django, el lenguaje Python, las plantillas de HTML o el servidor que ofrece \url{https://www.pythonanywhere.com/}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%% Resumen en inglés
@@ -319,13 +319,14 @@ Por último, para ambos modos se han definido varios \emph{dashboards} en el que
 \section{Planificación temporal}
 \label{sec:planificacion-temporal}
 
-Este trabajo de fin de grado ha requerido un tiempo estimado de 7 meses dedicándole de media 4 tardes/noches a la semana. Al tener que hacer las prácticas de la carrera, el trabajo de fin de grado de aeroespacial y continuar con mi trabajo de camarera en un restaurante se me hizo imposible ir más rápido. En la figura~\ref{figura:tiempo} se visualiza un diagrama del tiempo que dedique aproximadamente a los puntos más importantes del trabajo. 
- \begin{figure}[h]
-		\centering
-		\includegraphics[scale=0.45]{img/tiempo.PNG}
-		\caption{Planificación temporal del trabajo de fin de grado.}
-		\label{figura:tiempo}
-	    \end{figure}
+Este trabajo de fin de grado ha requerido un tiempo estimado de siete meses dedicándole de media cuatro tardes/noches a la semana. Al tener que hacer las prácticas de la carrera, el trabajo de fin de grado de aeroespacial y continuar con mi trabajo de camarera en un restaurante se me hizo imposible ir más rápido. En la figura~\ref{figura:tiempo} se visualiza un diagrama del tiempo que aproximadamente he dedicado a los puntos más importantes del trabajo. 
+
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.45]{img/tiempo.PNG}
+\caption{Planificación temporal del trabajo de fin de grado.}
+\label{figura:tiempo}
+\end{figure}
 
 
 
@@ -346,7 +347,7 @@ Como hemos mencionado previamente, la aplicación web será un analizador de pro
 
 \begin{itemize}
 
-	\item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro 		programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos 	dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de 	movimiento, sonidos, es decir, cada sprite tiene sus propios \emph{scripts}. Esto es muy útil 	sobretodo para crear animaciones, historias o juegos interactivos con personajes. Los sprites tienen una apariencia que puede cambiarse gracias a los ``customes'' que se pueden pintar como los dos del ejemplo anterior o se pueden importar.
+	\item Sprite: Hace referencia a los diferentes gráficos o personajes de nuestro 		programa. Por ejemplo, en la figura~\ref{figura:sprites} se puede observar que tenemos 	dos sprites (cuadrado y círculo) y a cada uno de ellos se les pueden asignar funciones de 	movimiento, sonidos, es decir, cada sprite tiene sus propios \emph{scripts}. Esto es muy útil 	sobre todo para crear animaciones, historias o juegos interactivos con personajes. Los sprites tienen una apariencia que puede cambiarse gracias a los ``customes'' que se pueden pintar como los dos del ejemplo anterior o se pueden importar.
 
 	    \begin{figure}[h]
 		\centering
@@ -371,7 +372,7 @@ Como hemos mencionado previamente, la aplicación web será un analizador de pro
             \begin{enumerate}[a)]
                 \item Motion: bloques que permiten dar movimiento al sprite o personaje.
                 \item Looks: permite cambiar las propiedades de apariencia del personaje.
-                \item Sound: permite añadir sonidos, cambiar el volumen...
+                \item Sound: permite añadir sonidos, cambiar el volumen, entre otros.
                 \item Pen: permite pintar líneas o crear estampas del sprite.
                 \\
                     \begin{figure}[h]
@@ -382,8 +383,8 @@ Como hemos mencionado previamente, la aplicación web será un analizador de pro
                     \end{figure}
                 \item Control: bloques para inicializar los scripts o para hacer bucles.
                 \item Sensing: permite distinguir interacciones como cuando pulsas una tecla o cuando tocas un borde con el ratón.
-                \item Operators: permite hacer operaciones como sumas, multiplicaciones,operaciones lógicas...
-                \item Variables: incluye listas, operaciones con listas, inicialización de variables...
+                \item Operators: permite hacer operaciones como sumas, multiplicaciones, operaciones lógicas, entre otras.
+                \item Variables: incluye listas, operaciones con listas, inicialización de variables, entre otras.
                 \begin{figure}[h]
                         \centering
                         \includegraphics[scale=0.5]{img/blo4-2.png}
@@ -438,9 +439,9 @@ Las ventajas de este modelo:
 
 Las desventajas de este modelo:
 \begin{itemize}
-    \item Problemas de congestión directamente proporcional al número de clientes
-    \item Mantenimiento simple
-    \item Escalable~\cite{lizama2016redes} 
+    \item Los problemas de congestión son directamente proporcionales al número de clientes
+    \item El mantenimiento simple
+    \item Es escalable~\cite{lizama2016redes} 
 \end{itemize}
 
 \begin{figure}[h]
