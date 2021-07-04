@@ -318,7 +318,7 @@ El nivel final, que es el que da la calificación total del proyecto obtenida a 
           Avanzado $\rightarrow $ [2.5, 3]
      \end{itemize}
 \item
-El modo profesor amplía el modo estudiante con la posibilidad de analizar un archivo ZIP en el que se encuentran los XML de los proyectos de sus alumnos. Una vez analizado todos los archivos XML, se da la opción de descargar las puntuaciones  de las 8 secciones y el nivel final en formato CSV.
+El modo profesor amplía el modo estudiante con la posibilidad de analizar un archivo ZIP en el que se encuentran los XML de los proyectos de sus alumnos. Una vez analizados todos los archivos XML, se da la opción de descargar las puntuaciones  de las 8 secciones y el nivel final en formato CSV.
 
 \end{itemize}
 Por último, para ambos modos se han definido varios \emph{dashboards} en el que se muestran gráficos de los datos de los proyectos analizados.
@@ -496,11 +496,11 @@ REST es un modelo de diseño de servicio web que define un conjunto de principio
 Para la interfaz de usuario o la capa de presentación hemos utilizado en nuestro diseño web diferentes tecnologías como son HTML, CSS y JavaScript.
 \begin{figure}[h]
         \centering
-        \includegraphics[scale=0.4]{img/frontend.png}
+        \includegraphics[scale=0.45]{img/frontend.png}
         \caption{Elementos FRONTEND}
         \label{figura:frontend}
 \end{figure}
-\subsection{HTML}
+
 \subsection{HTML}
 HyperText Markup Language, en español lenguaje marcado de hipervínculos, es el lenguaje básico de construcción de páginas web. Se basa en texto que contiene referencias a enlaces, imágenes, tablas, textos u otros elementos. Un elemento HTML debe ir entre etiquetas que definen la orden o instrucción de lo que se quiere insertar~\cite{equipo2009diseno}. Por ejemplo, para insertar un título se podría usar la etiqueta \textit{h1} o para insertar una imagen \textit{img}. HTML se encarga de crear el contenido de la página web pero no del estilo o apariencia de dicha página, para ello es necesario el CSS. Es decir, si nosotros queremos insertar un formulario para rellenar datos en nuestra página web va a ser necesario definir en HTML los elementos del formulario como son sus atributos (action y method), los campos que queremos que el usuario rellene con sus datos y un botón para darle a enviar. Ahora, para que el formulario tenga una apariencia en concreto tendremos que usar CSS para dar estilo a los elementos HTML del formulario.
 
@@ -522,7 +522,7 @@ Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje d
 \end{figure}
 
 \subsection{JavaScript}
-Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JavaScript en HTML se debe indicar con la etiqueta script. Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ´´event handler''~\cite{perez2019introduccion}.
+Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JavaScript en HTML se debe indicar con la etiqueta script. Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ``event handler''~\cite{perez2019introduccion}.
 
 \section{BACKEND}
 Se corresponde con la parte del servidor, la base de datos y la aplicación. Para ello utilizamos un lenguaje de programación (en nuestro caso Python), un framework para desarrollar el sitio web (Django), una base de datos (sqlite3) y un proveedor de servidor online donde lanzar la aplicación (pythonanywhere). En la figura~\ref{figura:backend} vemos distintas tecnologías que forman parte del \textit{backend}.
@@ -546,7 +546,7 @@ Es un framework de alto nivel que permite crear una aplicación web usando Pytho
 \begin{itemize}
     \item Tiene un mapeador objeto relacional (ORM) que es una biblioteca que reconoce y relaciona cómo es la base de datos o el código que tú escribas.
     \item Conjunto de bibliotecas HTTP que gestionan las peticiones y respuestas.
-    \item biblioteca de ruta de URLs para localizar el código que corresponde a la URL introducida. 
+    \item Biblioteca de ruta de URLs para localizar el código que corresponde a la URL introducida. 
     \item Sistema de plantillas que conforman la interfaz del usuario.
     \item Basado en el patrón MVC con la variación de que las vistas delegan la presentación al sistema de plantillas.
     \item Por defecto la base de datos es sqlite3 pero se puede usar otras como MySQL, PostgreSQL u Oracle configurándolo en el módulo settings.py.
@@ -622,7 +622,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
         \end{figure}
     \item \textbf{CSS}:
     
-    Como ya explicamos, el CSS es un lenguaje de estilo que proporciona las propiedades de apariencia de los elementos definidos en las plantillas HTML. Por ejemplo, en la figura~\ref{figura:cssyhtml} vemos como se vería la página sin CSS y con CSS. 
+    Como ya explicamos, el CSS es un lenguaje de estilo que proporciona las propiedades de apariencia de los elementos definidos en las plantillas HTML. Por ejemplo, en la figura~\ref{figura:cssyhtml} observamos como se vería la página sin CSS y con CSS. 
     \\
     \begin{figure}[h]
             \centering
@@ -647,7 +647,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     \\
         \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.4]{img/logos.png}
+            \includegraphics[scale=0.3]{img/logos.png}
             \caption{Muñeco de Snap! y de Dr. Snap!}
             \label{figura:logos}
         \end{figure}
@@ -665,7 +665,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
      
     \begin{figure}[h]
             \centering
-            \includegraphics[scale=0.8]{img/levels.PNG}
+            \includegraphics[scale=0.9]{img/levels.PNG}
             \caption{Imagen que dice el nivel de un proyecto.}
             \label{figura:levels}
         \end{figure}
@@ -731,7 +731,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
         
         
         \item views.py: son las funciones que reciben una petición HTTP, deben devolver una respuesta HTTP y están asociadas a un path de url como hemos explicado anteriormente. El ORM de Django recibe un path con una petición, mapea en el listado de urls a qué vista corresponde y se ejecuta dicha función para devolver la respuesta correcta renderizada con una de las plantillas HTML. Es decir, por ejemplo, si hacemos desde el navegador una petición GET para el recurso /analyze, la función vista analyze nos devolverá la respuesta HTTP definida en la función renderizada con la plantilla que hicimos para dicho recurso. La figura~\ref{figura:MVC} resume lo explicado. También se pueden hacer redirecciones a otras páginas, en caso de error mostrar página 404 o, incluso, pasar datos a las plantillas.
-        \item models.py: se definen las clases  y sus respectivos campos para la base de datos. En nuestra aplicación web tendremos tres clases: usuario, proyectos y el tipo de usuario (profesor o estudiante). En la figura~\ref{figura:models} queda reflejado las tres clases y sus campos correspondientes. Cabe destacar que la clase user ya viene implementada por el sistema de autenticación de usuarios de Django (en ``django.contrib.auth''), el cual proporciona funciones como login, logout o signup o la clase \textit{models.user}.
+        \item models.py: se definen las clases  y sus respectivos campos para la base de datos. En nuestra aplicación web tendremos tres clases: usuario, proyectos y el tipo de usuario (profesor o estudiante). En la figura~\ref{figura:models} quedan reflejadas las tres clases y sus campos correspondientes. Cabe destacar que la clase user ya viene implementada por el sistema de autenticación de usuarios de Django (en ``django.contrib.auth''), el cual proporciona funciones como login, logout o signup o la clase \textit{models.user}.
            \begin{figure}[h]
             \centering
             \includegraphics[scale=0.45]{img/models.PNG}
@@ -742,7 +742,7 @@ En este apartado se desarrolla la capa de presentación o interfaz del usuario. 
     
     \item \textbf{SQLITE3:}
     
-    Como hemos dicho previamente, nuestra base de datos será la que viene por defecto en Django, es decir, sqlite3. Es una base de datos sencilla y para crearla lo primero que debemos es indicarla en settings.py. Una vez definidas las clases en models.py se debe hacer una migración con los cambios hechos para luego migrarla. Cada vez que se cree una clase, se añada un campo nuevo o se elimine se debe hacer una migración que refleje estos cambios y luego migrarla a la base de datos. En la figura~\ref{figura:bbdd} se observan todas las tablas que hay creadas, sin embargo, las únicas que hemos creado nosotros, gracias al módulo de models.py, son las que empiezan por el nombre de la aplicación, es decir, \textit{myfirstapp\_proyectos} y \textit{myfirstapp\_tipo}. Todas las demás son implementadas por Django para diferentes funcionalidades, por ejemplo, \textit{auth user} es la tabla que representa la ya comentada clase user que viene ya predefinida con los campos de contraseña, Gmail, primer apellido...\\
+    Como hemos dicho previamente, nuestra base de datos será la que viene por defecto en Django, es decir, sqlite3. Es una base de datos sencilla y para crearla lo primero que debemos hacer es indicarla en settings.py. Una vez definidas las clases en models.py se debe hacer una migración con los cambios hechos para luego migrarla. Cada vez que se cree una clase, se añada un campo nuevo o se elimine se debe hacer una migración que refleje estos cambios y luego migrarla a la base de datos. En la figura~\ref{figura:bbdd} se observan todas las tablas que hay creadas, sin embargo, las únicas que hemos creado nosotros, gracias al módulo de models.py, son las que empiezan por el nombre de la aplicación, es decir, \textit{myfirstapp\_proyectos} y \textit{myfirstapp\_tipo}. Todas las demás son implementadas por Django para diferentes funcionalidades, por ejemplo, \textit{auth user} es la tabla que representa la ya comentada clase user que viene ya predefinida con los campos de contraseña, Gmail, primer apellido...\\
     
        \begin{figure}[h]
             \centering
@@ -823,7 +823,7 @@ Se propuso la idea de que los usuarios tuviesen la opción de hacerse una cuenta
 
 \begin{figure}[h]
 \centering
-            \includegraphics[scale=0.52]{img/sign.PNG}
+            \includegraphics[scale=0.5]{img/sign.PNG}
             \caption{Inicio de sesión y registro en Dr. Snap!}
             \label{figura:sign}
 \end{figure}
@@ -838,29 +838,29 @@ Con la anterior opción se conseguía tener una base de datos con los proyectos 
 
 \begin{figure}[h]
 \centering
-            \includegraphics[scale=0.52]{img/tipo.PNG}
+            \includegraphics[scale=0.5]{img/tipo.PNG}
             \caption{Página para elegir el tipo de usuario en el proceso de registro en Dr. Snap!}
             \label{figura:tipo}
     \end{figure}
     
 \subsection{Analizar ZIPs}
-Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por el usuario de tipo profesor. En la función de analizar proyectos, si estás logueado como profesor aparece un nuevo formulario en el que se ha implementado la posibilidad de importar un ZIP desde el ordenador. Para trabajar con el archivo comprimido hemos utilizado la biblioteca ``FileSystemStorage'' importada de ``django.core.files.storage'' y con la biblioteca ``zipFile''. De primeras, se dudó si trabajar con el archivo en local o en disco. Al final, me decanté por guardarlo en disco y trabajar con él ya que era menos complejo. En la figura~\ref{figura:zip} se muestra las opciones que ofrece la página analizar en caso de ser profesor. Los pasos para esta funcionalidad son los siguientes:
+Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por el usuario de tipo profesor. En la función de analizar proyectos, si estás logueado como profesor aparece un nuevo formulario en el que se ha implementado la posibilidad de importar un ZIP desde el ordenador. Para trabajar con el archivo comprimido hemos utilizado la biblioteca ``FileSystemStorage'' importada de ``django.core.files.storage'' y con la biblioteca ``zipFile''. De primeras, se dudó si trabajar con el archivo en local o en disco. Al final, me decanté por guardarlo en disco y trabajar con él ya que era menos complejo. En la figura~\ref{figura:zip} se muestran las opciones que ofrece la página analizar en caso de ser profesor. Los pasos para esta funcionalidad son los siguientes:
 \begin{itemize}
     \item Guardar el archivo ZIP en la carpeta llamada media, vista en la figura~\ref{figura:carpetas}. Esto se consigue con una función de ``FileSystemStorage'' llamada~\textit{fs.save()}.
     \item Quedarnos con la url donde se encuentra el ZIP con la función~\textit{fs.url()}.
     \item Descomprimir el ZIP con ``zipFile'' en una carpeta que se hace llamar: \textit{nombredeusuario\&nombredelarchivo } con la función~\textit{fs.urlextractall (password, path)}.
-    \item Analizar cada proyecto calculando las puntuaciones y guardando los datos en la base de datos. En este punto es cuando se decide añadir un campo del modelo \textit{proyecto} que se llamó \textit{nombre\_zip} ya que de esta forma los proyectos que no pertenecen a a ningún ZIP simplemente este campo se pondría a NULL.
+    \item Analizar cada proyecto calculando las puntuaciones y guardando los datos en la base de datos. En este punto es cuando se decide añadir un campo del modelo \textit{proyecto} que se llamó \textit{nombre\_zip} ya que de esta forma los proyectos que no pertenecen a ningún ZIP simplemente este campo se pondría a NULL.
 \end{itemize}
 \begin{figure}[h]
 \centering
-            \includegraphics[scale=0.5]{img/zip.PNG}
+            \includegraphics[scale=0.35]{img/zip.PNG}
             \caption{Formularios para subir un ZIP o analizar un proyecto en Dr. Snap!}
             \label{figura:zip}
     \end{figure}
 \subsection{Dashboard}
-       Los 3 dashboard que tenemos son los que enseñamos en la figura~\ref{figura:dshboard2} y otro más donde se compara los resultados de dos ZIPs que se hayan subido a la aplicación (figura~\ref{figura:dshboard}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
+       Los 3 dashboard que tenemos son los que enseñamos en la figura~\ref{figura:dshboard2} y otro más donde se comparan los resultados de dos ZIPs que se hayan subido a la aplicación (figura~\ref{figura:dshboard}). Los datos que hemos cogido son los resultados de los proyectos que hay guardados en las cuentas de un estudiante o un profesor, es decir, han debido ser analizados previamente y guardados en la base de datos. ~Según el modo:
     \begin{itemize}
-        \item Estudiante: sólo están disponibles los gráficos de la figura ~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno a analizado en Dr. Snap! en un diagrama de barras y en donut.\\
+        \item Estudiante: sólo están disponibles los gráficos de la figura ~\ref{figura:dshboard2} y en ella se muestran los resultados de los proyectos que el alumno ha analizado en Dr. Snap! en un diagrama de barras y en donut.\\
         \begin{figure}[h]
             \centering
             \includegraphics[scale=0.4]{img/dashboard.PNG}
@@ -961,7 +961,7 @@ Como ya hemos mencionado, para registrarse es necesario elegir el tipo de usuari
 
 \section{Proyectos en la base de datos}
 
-Al analizar un proyecto de un usuario registrado se debe guardar el usuario, las puntuaciones del proyecto y su nivel asociado, el nombre del proyecto, la URL de nuestra aplicación web, la URL de Snap! y si es zip o no. Desde el usuario de \textit{maria21} vamos analizar el proyecto de la figura~\ref{figura:snap-ej} y podemos ver en la figura~\ref{figura:validacion-bbdd} que se ha guardado todos los datos de forma correcta en la base de datos. Con esta tabla seremos capaces de acceder cuando queramos a las puntuaciones del proyecto gracias al recurso \textit{/project/\<name\_project>} que accede a esta base de datos filtrando por usuario y nombre del proyecto.
+Al analizar un proyecto de un usuario registrado se deben guardar el usuario, las puntuaciones del proyecto y su nivel asociado, el nombre del proyecto, la URL de nuestra aplicación web, la URL de Snap! y si es zip o no. Desde el usuario de \textit{maria21} vamos a analizar el proyecto de la figura~\ref{figura:snap-ej} y podemos ver en la figura~\ref{figura:validacion-bbdd} que se han guardado todos los datos de forma correcta en la base de datos. Con esta tabla seremos capaces de acceder cuando queramos a las puntuaciones del proyecto gracias al recurso \textit{/project/\<name\_project>} que accede a esta base de datos filtrando por usuario y nombre del proyecto.
 \begin{figure}[h]
             \centering
             \includegraphics[scale=0.37]{img/maria21.png}
@@ -970,7 +970,7 @@ Al analizar un proyecto de un usuario registrado se debe guardar el usuario, las
         \end{figure}
         
 \section{ZIPs en la base de datos}
-De igual forma que en la sección anterior, vamos a comprobar que al analizar un ZIP los datos quedan correctamente guardados en la base de datos. El ZIP denominado \textit{validacion.zip} usado de ejemplo  consta de 3 proyectos sacados de Snap! Berkeley llamados: \textit{Dogde.xml}, \textit{ S2E1 - Human body scanner.xml} y \textit{Sierpinski carpet.xml}. En la figura~\ref{figura:bbdd-zip} podemos ver como se han añadido los 3 proyectos nuevos pertenecientes a \textit{validacion.zip} a la base de datos que teníamos en la figura~\ref{figura:validacion-bbdd}.
+De igual forma que en la sección anterior, vamos a comprobar que al analizar un ZIP los datos quedan correctamente guardados en la base de datos. El ZIP denominado \textit{validacion.zip} usado de ejemplo  consta de 3 proyectos sacados de Snap! Berkeley llamados: \textit{Dogde.xml}, \textit{ S2E1 - Human body scanner.xml} y \textit{Sierpinski carpet.xml}. En la figura~\ref{figura:bbdd-zip} podemos ver como se han añadido los tres proyectos nuevos pertenecientes a \textit{validacion.zip} a la base de datos que teníamos en la figura~\ref{figura:validacion-bbdd}.
 \begin{figure}[h]
             \centering
             \includegraphics[scale=0.37]{img/bbdd-zip.png}
