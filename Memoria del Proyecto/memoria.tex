@@ -1109,13 +1109,194 @@ Un posible proyecto futuro sería la mejora de esta herramienta para que admita 
 
 \cleardoublepage
 \appendix
-\chapter{Manual de usuario}
-\label{app:manual}
+\chapter{Vistas creadas y templates HTML asociadas}
+\label{app:templates}
+Como hemos explicado anteriormente, en Django se puede renderizar una vista con una plantilla HTML mostrando en ella el contenido de dicha vista. En este apéndice veremos las vistas creadas y sus correspondientes plantillas para luego poder entender en el siguiente capítulo los diagramas de flujo.
+\section{Analyze}
+Vista que permite analizar los proyectos o ZIPs.
+    
+    \begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/analyze-estudiantes.PNG}
+            \caption{analyze-estudiantes.html}
+             \label{figura:analyze-estudiantes.html}
+        \end{figure}
+    \begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/simple-upload.PNG}
+            \caption{simple-upload.html}
+             \label{figura:simple}
+        \end{figure}
+     \begin{figure}[!]
+            \centering
+           \includegraphics[scale=0.6]{img/error-analyze.PNG}
+            \caption{error\_analizar.html}
+             \label{figura:simple}
+        \end{figure}
+    
+    \begin{figure}[!]
+            \centering
+           \includegraphics[scale=0.5]{img/error-z.PNG}
+            \caption{error\_analizar\_zip.html}
+             \label{figura:simple}
+        \end{figure}
+    \begin{figure}[!]
+            \centering
+           \includegraphics[scale=0.25]{img/result-project.png}
+            \caption{result.html para un proyecto}
+             \label{figura:result}
+        \end{figure}
+    \begin{figure}[!]
+            \centering
+           \includegraphics[scale=0.3]{img/result-p.png}
+            \caption{result.html para un ZIP}
+             \label{figura:simple}
+        \end{figure}
 
-Esto es un apéndice.
-Si has creado una aplicación, siempre viene bien tener un manual de usuario.
-Pues ponlo aquí.
 
+\section{Principal}
+Vista que proporciona la página principal de la aplicación web. 
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.33]{img/ppal.PNG}
+            \caption{home.html}
+             \label{figura:home}
+        \end{figure}
+
+\section{Login\_user}
+Vista que proporciona un formulario para iniciar sesión.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/login.PNG}
+            \caption{login.html}
+             \label{figura:login}
+        \end{figure}
+
+\section{Choose}
+Vista que permite elegir si eres alumno o profesor.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/choose-type.PNG}
+            \caption{opcion\_tipo\_user.html}
+             \label{figura:type}
+        \end{figure}
+\section{Signup}
+Vista que proporciona un formulario para crearse una cuenta. 
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.42]{img/signup.PNG}
+            \caption{signup.html}
+             \label{figura:signup}
+        \end{figure}
+\section{Show\_projects}
+Vista que permite ver los proyectos o ZIPs que se hayan analizado y guardado en la base de datos. En la figura~\ref{figura:show} se muestra la plantilla para profesores, sin embargo para estudiantes es la misma pero sin el formulario de obtener el CSV.
+
+    
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.3]{img/please.PNG}
+            \caption{please-login.html}
+             \label{figura:plis}
+        \end{figure}
+        
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.33]{img/show_projec.png}
+            \caption{show\_projects.html para profesores}
+             \label{figura:show}
+        \end{figure}
+        
+\section{Show\_project}
+
+Vista que proporciona las puntuaciones del proyecto ya analizado y guardado. Utiliza la plantilla ya vista en la figura~\ref{figura:result}.
+
+\section{Dashboard}
+Vista que crea dos dashboard a partir de los datos de los proyectos analizados previamente por el usuario. 
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.2]{img/dash.png}
+            \caption{dashboard.html para estudiantes}
+             \label{figura:Dash}
+        \end{figure}
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.33]{img/dash-p.png}
+            \caption{dashboard.html para profesores}
+             \label{figura:Dash2}
+        \end{figure}
+        
+\begin{figure}[!]
+            \centering
+           \includegraphics[scale=0.33]{img/comparar-ej.png}
+            \caption{dashboard\_comparing.html}
+             \label{figura:Dash3}
+        \end{figure}
+        
+\section{Dashboard\_level}
+Vista que permite mostrar los proyectos del nivel del que has hecho click.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.3]{img/dash_level.png}
+            \caption{dashboard\_level.html}
+             \label{figura:Dash3}
+        \end{figure}
+        
+
+\chapter{Diagramas de flujo}
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/flujo_analyze.PNG}
+            \caption{Diagrama de flujo de la vista \textit{analyze}.}
+             \label{figura:flujo1
+             }
+        \end{figure}
+        
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/flujo_shows.PNG}
+            \caption{Diagrama de flujo de la vista \textit{show\_projects}.}
+             \label{figura:flujo2
+             }
+        \end{figure}
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/flujo_dash.PNG}
+            \caption{Diagrama de flujo de la vista \textit{dashboard}.}
+             \label{figura:flujo3
+             }
+        \end{figure}
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/flujo_login.PNG}
+            \caption{Diagrama de flujo de la vista \textit{login\_user}.}
+             \label{figura:flujo4
+             }
+        \end{figure}
+ \begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/flujo_signup.PNG}
+            \caption{Diagrama de flujo de la vista \textit{signup}.}
+             \label{figura:flujo5
+             }
+        \end{figure}
+        
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.6]{img/flujo_choose.PNG}
+            \caption{Diagrama de flujo de la vista \textit{choose}.}
+             \label{figura:flujo5
+             }
+        \end{figure}
+              
+\chapter{PythonAnywhere}
+Al estar la aplicación alojada en el servidor que nos provee \textit{pythonAnywhere} podemos ver el tráfico de la página web y su configuración como se observa en la figura~\ref{figura:pythonany}.
+\begin{figure}[h]
+            \centering
+           \includegraphics[scale=0.5]{img/pythonanywhere.PNG}
+            \caption{Página de configuración de la aplicación de la web en \textit{pythonAnywhere}}
+             \label{figura:pythonany
+             }
+        \end{figure}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % BIBLIOGRAFIA %
