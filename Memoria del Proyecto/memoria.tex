@@ -206,7 +206,7 @@ As it is the translation of the ``Resumen'', which is supposed to be written at 
 \chapter{Introducción}
 \label{sec:intro} % etiqueta para poder referenciar luego en el texto con~\ref{sec:intro}
 \pagenumbering{arabic} % para empezar la numeración de página con números
-Con el avance de las tecnologías, la programación y el pensamiento computacional se han extendido de tal forma que ya se incluyen en el temario de educación secundaria obligatoria. Un programa no es más que un conjunto de sentencias que dan instrucciones a un ordenador y es necesario aprender un lenguaje de programación con el que escribirlas.
+Con el avance de las tecnologías, la programación y el pensamiento computacional se han extendido de tal forma que ya se incluyen en el temario de la etapa académica educación secundaria obligatoria. Un programa no es más que un conjunto de sentencias que dan instrucciones a un ordenador y es necesario aprender un lenguaje de programación con el que escribirlas.
 
 Este trabajo de fin de grado gira entorno a una plataforma de programación interactiva denominada Snap! Berkeley. En ella los usuarios crean programas a partir de bloques ya definidos o creando tus propios bloques. Además, ofrece la opción de subir todos tus proyectos y cuenta con un foro, con tutoriales y con un manual de referencia. Se creará una aplicación web en la que los usuarios puedan subir el proyecto creado en Snap! para ser analizado y poder obtener resultados basados en su nivel de programación. 
 
@@ -232,7 +232,7 @@ En este ámbito, Scratch es una de las plataformas virtuales más conocidas y pe
 El pensamiento computacional es ``el proceso de pensamiento que interviene en la formulación de los problemas y sus soluciones, de manera que las soluciones se representen de forma que pueda ser realizada por un procesador de información''~\cite{wing2011research}. Para poder evaluar sus competencias se han definido los siguientes puntos basados en la herramienta Dr. Scratch:
 \begin{enumerate}[1)]
     \item Paralelismo: sucesión simultánea de varias instrucciones o acciones. Por ejemplo, se necesitaría paralelismo si quisiésemos que dos personajes giren 15º a la vez.
-    \item Condicionales: cuando las instrucciones se pueden ejecutar o no en función del resultado de una condición. Los condicionales más típicos, entre ellos, se incluyen los operadores lógicos (and, or, not).
+    \item Condicionales: cuando las instrucciones se pueden ejecutar o no en función del resultado de una condición. Entre los condicionales más típicos se incluyen los operadores lógicos (and, or, not).
     \item Control de flujo: hace referencia al orden en el que se ejecutan las instrucciones. El orden natural en un programa sería que la instrucciones fuesen ejecutándose una a una. Sin embargo, también se debe incluir la opción de ejecutar un conjunto de instrucciones hasta que suceda otro evento o que las instrucciones se ejecuten las veces que queramos (hablamos de bucles).
     \item Abstracción: se consigue dividiendo un problema grande en pequeños conjuntos más sencillos y simples separando en \emph{scripts} o creando bloques definidos.
     \item Sincronización: supone el ajuste temporal de diferentes eventos. Es decir, cuando se desea ejecutar una instrucción una vez ha terminado otra se requiere que ambos eventos estén sincronizados.
@@ -254,7 +254,7 @@ Snap! es una plataforma virtual que se programó en JavaScript como extensión d
 
 El manual de referencia consta de once capítulos y de dos anexos y en ellos se explica en detalle todo lo relacionado con el manejo de sus bloques para programar~\cite{harvey2017snap}. Por ejemplo, el capítulo I sección A trata sobre cómo crear paralelismo en Snap! gracias a la configuración de un tipo de bloques o el capítulo III te explica cómo crear tus propios bloques definidos.
 
-El entorno de programación de Snap! donde se crean los programas se indica en la figura~\ref{figura:entorno_snapp}. En la sección indicada como A) se encuentran los bloques definidos de 8 categorías para crear los programas, la sección B) es donde se crean los conjuntos de instrucciones arrastrando los bloques y uniéndolos entre ellos. Por último, la sección C) es donde se puede ver dichas instrucciones ejecutándose y siendo aplicadas a los personajes que definimos.
+El entorno de programación de Snap! donde se crean los programas se indica en la figura~\ref{figura:entorno_snapp}. En la sección indicada como A) se encuentran los bloques definidos de 8 categorías para crear los programas, la sección B) es donde se crean los conjuntos de instrucciones arrastrando los bloques y uniéndolos entre ellos. Por último, la sección C) es donde se pueden ver dichas instrucciones ejecutándose y siendo aplicadas a los personajes que definimos.
 \begin{figure}[h]
         \centering
         \includegraphics[scale=0.35]{img/entorno.png}
@@ -340,7 +340,7 @@ Este trabajo de fin de grado ha requerido un tiempo estimado de siete meses dedi
 \chapter{Estado del arte}
 \label{chap:estado}
 
-En este apartado se explicará de forma breve y concisa los lenguajes de programación, bases de datos, modelos, arquitecturas y demás tecnologías que se hayan necesitado para la implementación de nuestra aplicación web. Haremos una clara distinción entre los conceptos básicos que se han necesitado adquirir y las tecnologías usadas para que nuestra aplicación ofrezca las prestaciones prometidas y tenga un buen diseño web.
+En este apartado se explicarán de forma breve y concisa los lenguajes de programación, bases de datos, modelos, arquitecturas y demás tecnologías que se hayan necesitado para la implementación de nuestra aplicación web. Haremos una clara distinción entre los conceptos básicos que se han necesitado adquirir y las tecnologías usadas para que nuestra aplicación ofrezca las prestaciones prometidas y tenga un buen diseño web.
 
 \section{Snap! Berkeley}
 Como hemos mencionado previamente, la aplicación web será un analizador de proyectos creados desde Snap! Berkeley. Cabe destacar que el funcionamiento de Snap! como lenguaje resulta ser muy potente pudiendo crear programas complejos y elaborados. Para entender el funcionamiento de la programación en Snap! es necesario definir algunos conceptos básicos de la programación por bloques~\cite{harvey2017snap}:
@@ -404,7 +404,7 @@ Como hemos mencionado previamente, la aplicación web será un analizador de pro
              \item Brick shape: de forma simple y de tipo command block.
              \item C shape: es de tipo command pero admite dentro de él otro script o un único brick shape. Se corresponde con los bucles y los condicionales.
              \item E shape: compuesto con dos bloques C shape.
-             \item Oval shape: se corresponde con los reporter block. Por ejemplos, las variables son óvalos de color naranja.
+             \item Oval shape: se corresponde con los reporter block. Por ejemplo, las variables son óvalos de color naranja.
              \item Hex shape: se corresponde con los predicate block.
              \end{enumerate}
         En la figura~\ref{figura:shape} tenemos varios ejemplos.
@@ -455,7 +455,7 @@ Cabe mencionar que es un modelo de aplicación distribuida ya que las tareas que
 \begin{itemize}
     \item Capa de presentación: también llamada interfaz de usuario, es responsable del control de la interacción entre el usuario y la aplicación. Se engloban todas las tareas que deben ser realizadas por la parte cliente del modelo general~\cite{marini2012modelo}. Por ejemplo, para el aspecto de la aplicación web se puede usar CSS, un lenguaje de estilos. Además,esta capa se corresponde en la actualidad con el concepto de \textit{frontend} de una aplicación web.
     \item Capa de negocio: es la capa intermedia ya que se comunica con la capa de presentación y con la capa de datos~\cite{bazurto2018arquitectura}. Asegura las directrices o reglas del negocio, controla las secuencias de acciones y aísla los cambios de las interfaces de los usuarios y de los datos~\cite{marini2012modelo}.
-    \item Capa de datos: es la que tiene los datos y la que se encarga de acceder a ellos y operar con ellos. Esta capa se corresponde con el concepto de \textit{backend}. Las tecnologías que se incluyen en esta capa son tales como los gestores de bases de datos o los frameworks.
+    \item Capa de datos: es la que tiene los datos y la que se encarga de acceder a ellos y operar con los mismos. Esta capa se corresponde con el concepto de \textit{backend}. Las tecnologías que se incluyen en esta capa son tales como los gestores de bases de datos o los frameworks.
 \end{itemize}
 \begin{figure}[h]
         \centering
@@ -523,7 +523,7 @@ Cascading Style Sheets, en español hojas de estilo en cascada, es el lenguaje d
 \end{figure}
 
 \subsection{JavaScript}
-Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JavaScript en HTML se debe indicar con la etiqueta script. Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se pueda incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ``event handler''~\cite{perez2019introduccion}.
+Lenguaje de programación interpretado y orientado a objetos usado para crear contenido dinámico en las páginas webs. Para insertar código JavaScript en HTML se debe indicar con la etiqueta script. Ofrece la oportunidad de convertir una página web que en un principio era estática, en una página interactiva donde se puedan incluir menús emergentes, botones para hacer click o incluso animaciones~\cite{mdn1}. Esto es posible gracias al modelo de programación basada en eventos utilizado por JavaScript en el que el script espera a que el usuario interactúe de alguna forma (evento), procesa la información y responde con una acción a través de una función. Por ejemplo, cuando el usuario pincha la pantalla el evento se denomina onClick. Cada evento tiene asociada una función que ejecuta JavaScript denominada ``event handler''~\cite{perez2019introduccion}.
 
 \section{BACKEND}
 Se corresponde con la parte del servidor, la base de datos y la aplicación. Para ello utilizamos un lenguaje de programación (en nuestro caso Python), un framework para desarrollar el sitio web (Django), una base de datos (sqlite3) y un proveedor de servidor online donde lanzar la aplicación (pythonanywhere). En la figura~\ref{figura:backend} vemos distintas tecnologías que forman parte del \textit{backend}.
@@ -561,7 +561,7 @@ Es un framework de alto nivel que permite crear una aplicación web usando Pytho
         \label{figura:appDjango}
 \end{figure}
 \subsection{SQLite3}
-SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarrollado en una biblioteca programada en C la cual tiene compatibilidad con la mayoría de lenguajes de programación utilizados a día de hoy, SQLite es un motor SQL confiable dado que la mayoría del código fuente presente en su biblioteca está destinado a la realización de test unitarios y procesos de validación, cabe destacar en SQLite las siguientes características~\cite{sqlite}: 
+SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarrollado en una biblioteca programada en C la cual tiene compatibilidad con la mayoría de lenguajes de programación utilizados a día de hoy. SQLite es un motor SQL confiable dado que la mayoría del código fuente presente en su biblioteca está destinado a la realización de test unitarios y procesos de validación, cabe destacar en SQLite las siguientes características~\cite{sqlite}: 
 \begin{itemize}
     \item Autónomo y casi independiente: En el proceso de ejecución no existe un uso de más recursos que los proporcionados en el código fuente de SQLite, no realizando así un uso de bibliotecas u programas externos del sistema.
 \item Carencia de servidor: Para este motor el sistema cliente-servidor clásico es cosa del pasado, pudiendo permitir que el proceso que requiera de SQLite lea y escriba directamente desde los archivos de la base de datos en disco. 
@@ -570,7 +570,7 @@ SQLite es un motor de datos SQL mundialmente utilizado, este motor está desarro
 
 \end{itemize}
 \subsection{PythonAnywhere}
-Proporciona un servidor para poder subir tu aplicación web a la nube. Es compatible con proyectos de Django y existen dos modalidades: de pago y gratuita. La de pago tiene más ventajas y opciones como es la posibilidad de elegir el dominio, al contrario que, la versión gratuita que te impone el dominio \url{http://yourusername.pythonanywhere.com/}. En nuestro caso, la aplicación estará alojada en \url{http://prodriguezmartinez.pythonanywhere.com/}.
+Proporciona un servidor para poder subir tu aplicación web a la nube. Es compatible con proyectos de Django y existen dos modalidades: de pago y gratuita. La de pago tiene más ventajas y opciones como es la posibilidad de elegir el dominio, al contrario que la versión gratuita que te impone el dominio \url{http://yourusername.pythonanywhere.com/}. En nuestro caso, la aplicación estará alojada en \url{http://prodriguezmartinez.pythonanywhere.com/}.
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -891,9 +891,9 @@ Para poder analizar un archivo ZIP debe ser subido primero a la aplicación por 
 \chapter{Experimentos y validación}
 
 
-Para validar y testear la aplicación web hemos distinguido diferentes fases o puntos a lo largo que ha ido avanzando el proyecto. En orden cronológicos tenemos las siguientes validaciones:
+Para validar y testear la aplicación web hemos distinguido diferentes fases o puntos a lo largo que ha ido avanzando el proyecto. En orden cronológico tenemos las siguientes validaciones:
 \section{Parseo del XML}
-Para ello se tuvieron que analizar más de 50 proyectos, algunos creados por mí y otros cogidos de proyectos subidos a Snap! Berkeley. Con esto se pretendía deducir la estructura más común y global que presentaban la mayoría de los proyectos en formato XML. Por ejemplo, en la figura~\ref{figura:xml-1} se muestra el fichero XML que se obtiene al añadir simplemente el bloque \textit{move} en un script. En primera instancia se supuso que los XML tendrían las etiquetas project, stage, sprites, sprite, scripts, script y block ya que en en stage están todos los sprites, en cada sprite están los scripts y en cada script están los bloques utilizados. Sin embargo, esta aproximación era errónea ya que al agregar nuevos bloques el XML añadía nuevas etiquetas que provocaban continuos errores de lectura. Algunos puntos a tener en cuenta son:
+Para ello se tuvieron que analizar más de 50 proyectos, algunos creados por mí y otros cogidos de proyectos subidos a Snap! Berkeley. Con esto se pretendía deducir la estructura más común y global que presentaban la mayoría de los proyectos en formato XML. Por ejemplo, en la figura~\ref{figura:xml-1} se muestra el fichero XML que se obtiene al añadir simplemente el bloque \textit{move} en un script. En primera instancia se supuso que los XML tendrían las etiquetas project, stage, sprites, sprite, scripts, script y block ya que en stage están todos los sprites, en cada sprite están los scripts y en cada script están los bloques utilizados. Sin embargo, esta aproximación era errónea ya que al agregar nuevos bloques el XML añadía nuevas etiquetas que provocaban continuos errores de lectura. Algunos puntos a tener en cuenta son:
 \begin{figure}[h]
             \centering
             \includegraphics[scale=0.6]{img/xml_val.PNG}
